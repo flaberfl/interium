@@ -1,0 +1,405 @@
+// <SELECT>
+// Сниппет (HTML): sel
+.select {
+	min-width: 0;
+	position: relative;
+
+
+	.item-total & {
+		font-size: toRem(12);
+	}
+
+	// .select__body
+	&__body {
+		position: relative;
+
+		.item-total & {
+			height: toRem(26);
+
+			@media (max-width:$mobileSmall){
+				 width: toRem(95); 
+			}
+		}
+
+		.geo-icon & {
+			&::after {
+				content: '';
+				position: absolute;
+				background: url('@img/account/geo.svg') 0 0 no-repeat;
+				z-index: 20;
+				width: toRem(18);
+				height: toRem(22);
+				left: toRem(24);
+				top: 50%;
+				transform: translate(0px, -50%);
+
+				.form-checkout & {
+					@include adaptiveValue("left", 24, 13);
+
+				}
+			}
+		}
+	}
+
+	// .select__title
+	&__title {
+		color: inherit;
+		text-align: left;
+		border: 1px solid #666;
+		background-color: #fff;
+		cursor: pointer;
+		width: 100%;
+		color: #666;
+
+		border-radius: toRem(50);
+
+
+		._select-open & {
+			color: inherit;
+			border-radius: toRem(26) toRem(26) 0 0;
+		}
+
+		._select-open & {
+			.filter & {
+				color: inherit;
+				// border: none;
+				border: 1px solid #e2e2e2;
+			}
+
+			.item-total & {
+				border: 1px solid #ececec;
+				border-radius: toRem(16) toRem(16) 0 0;
+			}
+		}
+
+		.geo-icon & {
+			border: 1px solid #ececec;
+		}
+
+		._select-open & {
+			&::before {
+				transform: translateX(-75%) rotate(-40deg);
+			}
+
+			&::after {
+				transform: rotate(40deg);
+			}
+
+			&::before,
+			&::after {
+				background-color: $secondaryColor;
+			}
+		}
+
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			right: 26px;
+			top: 50%;
+			background-color: #666;
+			height: 2px;
+			width: 6px;
+			transition: transform 0.5s ease 0s;
+
+			.item-total & {
+				right: 10px;
+				top: 54%;
+			}
+		}
+
+		&::before {
+			transform: translate(-75%, -50%) rotate(40deg);
+		}
+
+		&::after {
+			transform: translate(0, -50%) rotate(-40deg);
+		}
+	}
+
+	// .select__value
+	&__value {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		height: toRem(50);
+		padding: 0 toRem(15);
+		gap: toRem(10);
+
+
+		.filter & {
+			padding-left: toRem(20);
+			font-size: toRem(18);
+		}
+
+		._select-open & {
+			.filter & {
+				// border-bottom: 2px solid #ededed;
+			}
+		}
+
+		.item-total & {
+			height: toRem(26);
+			padding-right: toRem(3);
+
+			@media (max-width:$mobile) {
+				padding: 0 toRem(10);
+				padding-right: toRem(0);
+			}
+		}
+
+		.personal__form & {
+			padding-left: toRem(48);
+			height: toRem(58);
+		}
+
+		.checkout__form .geo-icon & {
+			@include adaptiveValue("padding-left", 48, 33);
+			@include adaptiveValue("height", 56, 42);
+		}
+
+		>* {
+			flex: 1 1 auto;
+		}
+
+		&:after {
+			content: "";
+			align-self: stretch;
+			flex: 0 0 10px;
+			transition: all 0.3s ease 0s;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			._select-open & {
+				transform: rotate(-180deg);
+			}
+		}
+
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				// opacity: 0.5;
+			}
+		}
+	}
+
+	// .select__content
+	&__content {
+		flex: 1 1 auto;
+		overflow: hidden;
+		// text-overflow: ellipsis;
+		white-space: nowrap;
+		font-size: toRem(18);
+		line-height: 350%;
+
+		.item-total & {
+			font-size: toRem(12);
+			width: toRem(78);
+
+			span {}
+		}
+
+		span {
+			display: none;
+		}
+	}
+
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+
+		._select-open & {
+			border-bottom: 1px solid #ededed;
+		}
+
+		&::placeholder {
+			color: #000;
+		}
+	}
+
+	// .select__options
+	&__options {
+		color: #000;
+		position: absolute;
+		top: calc(100% - toRem(1));
+		border-radius: 0 0 toRem(26) toRem(26);
+		box-shadow: 0 9px 54px 0 rgba(0, 0, 0, 0.04);
+		min-width: 100%;
+		left: 0;
+		background-color: #fff;
+		border: 1px solid #e2e2e2;
+
+		border-top: 0;
+		padding: 10px 0px 5px 0px;
+		padding-bottom: toRem(12);
+
+		.personal__form & {
+			padding-left: toRem(32);
+			padding-bottom: toRem(25);
+		}
+
+		.item-total & {
+			padding: 0px 0px 0px 0px;
+			border-radius: 0 0 toRem(16) toRem(16);
+		}
+	}
+
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальная высота
+		max-height: toRem(200);
+
+		// Стили скроллбара
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+
+	// .select__option
+	&__option {
+		position: relative;
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		padding: 15px 15px;
+		color: inherit;
+
+		.filter & {
+			padding-left: 45px;
+			padding-top: 9px;
+
+			font-size: toRem(15);
+			font-weight: 350;
+			color: #666;
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: toRem(18);
+				height: toRem(18);
+				border: 1px solid #f1f1f1;
+				border-radius: 4px;
+				background-color: #fff;
+				left: toRem(18);
+			}
+		}
+
+		.item-total & {
+
+			padding-top: toRem(10);
+			padding-bottom: toRem(10);
+		}
+
+		&._select-selected {
+			// background-color: #eee;
+
+			&::before {
+				border: 1px solid var(--secondary-color);
+				background: #fff url('@img/catalog/check.svg') center center no-repeat;
+			}
+		}
+
+		.personal__form & {
+
+			@media (any-hover: hover) {
+				&:hover {
+					background: #d9d9d9;
+				}
+			}
+		}
+
+	}
+
+	// Конструкция дополнительных данных
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__asset {}
+
+	&__text {}
+
+	&--show-top {
+		.select__options {
+			top: auto;
+			bottom: calc(100% - toRem(1));
+			border: 1px solid #d9d9d9;
+			border-bottom: 0;
+			border-radius: 4px 4px 0 0;
+			padding: 5px 0px 10px 0px;
+		}
+	}
+
+	// Состояние селекта
+	&._select-open {}
+
+	&._select-disabled {}
+
+	&._select-active {}
+
+	&._select-focus {}
+
+	&._select-multiple {}
+
+	&._select-checkbox {}
+}
+
+// Тег
+._select-tag {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: toRem(42);
+	padding: toRem(0) toRem(15);
+	padding-right: toRem(57);
+	border: 1px solid #f5f5f5;
+	border-radius: 50px;
+	background-color: #fff;
+
+	cursor: pointer;
+	font-size: toRem(15);
+
+	transition: all 0.3s;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background: url('@img/catalog/x-b.svg') right center no-repeat;
+		right: toRem(15);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #000;
+			color: #fff;
+
+			&::before {
+				background: url('@img/catalog/x-w.svg') right center no-repeat;
+			}
+		}
+	}
+}
+
+
+.checkout__label {
+	color: red !important;
+}

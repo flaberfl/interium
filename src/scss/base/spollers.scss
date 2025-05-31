@@ -1,0 +1,132 @@
+// Базовые стили спойлеров
+// Сниппет (HTML): spoller
+
+// Блок со спойлерами
+.spollers {
+	display: grid;
+	gap: 15px;
+}
+
+// Спойлер
+.spollers__item {
+	// font-size: toRem(20);
+}
+
+// Заголовок спойлера
+.spollers__title {
+	width: 100%;
+	cursor: default;
+	text-align: left;
+	padding: toRem(20) toRem(30) toRem(20) toRem(6);
+	border: 1px solid #f3f3f3;
+	border-radius: 10px;
+	position: relative;
+	list-style: none;
+	background: #fcfcfc;
+
+	&::marker,
+	&::-webkit-details-marker {
+		display: none;
+	}
+
+	.catalog__filter-spoller & {
+		padding: 0;
+		border: none;
+		// padding-bottom: toRem(20);
+		background: transparent;
+
+		&::before,
+		&::after {
+			display: none;
+		}
+	}
+
+	._spoller-init & {
+		cursor: pointer;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			right: toRem(26);
+			top: 50%;
+			background-color: #000;
+			height: 2px;
+			width: 9px;
+			transition: transform 0.5s ease 0s;
+
+			@media (max-width: toEm(660)) {
+				top: 20%;
+			}
+		}
+
+		&::before {
+			transform: translate(-75%, -50%) rotate(40deg);
+		}
+
+		&::after {
+			transform: translate(0, -50%) rotate(-40deg);
+		}
+
+		&._spoller-active {
+
+			&::before,
+			&::after {
+				background-color: $secondaryColor;
+			}
+
+			&::before {
+				transform: translateX(-75%) rotate(-40deg);
+			}
+
+			&::after {
+				transform: rotate(40deg);
+			}
+		}
+
+		/*
+		._spoller-init & {
+			position: relative;
+			width: 100%;
+			text-align: left;
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				top: toRem(12);
+				height: toRem(1);
+				transition: all 0.3s ease 0s;
+				width: toRem(10);
+				background-color: #000;
+			}
+			&::before {
+				transform: rotate(40deg);
+				right: toRem(7);
+			}
+			&::after {
+				transform: rotate(-40deg);
+			}
+		}
+		&._spoller-active {
+			&::before {
+				transform: rotate(-40deg);
+			}
+			&::after {
+				transform: rotate(40deg);
+			}
+		}
+		*/
+	}
+}
+
+// Контент спойлера
+.spollers__body {
+	// padding: toRem(20);
+	padding-left: 2px;
+	@include adaptiveValue("padding-top", 36, 27);
+
+	@media (max-width:$mobile) {
+		padding-left: 0;
+	}
+}

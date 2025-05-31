@@ -1,0 +1,81 @@
+//<INPUT>
+// Сниппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.input {
+	border-radius: toRem(50);
+	width: 100%;
+	display: block;
+	padding: 0 toRem(24);
+	caret-color: inherit;
+	height: toRem(60);
+
+	border: 1px solid #ececec;
+	backdrop-filter: blur(9px);
+	background: rgba(255, 255, 255, 0.6);
+
+	&._form-focus {
+		border: 1px solid #000;
+	}
+
+	&._form-error {
+		border: 1px solid #d42023;
+		color: #d42023;
+
+
+		.input::placeholder {
+			display: none;
+		}
+
+	}
+
+	&_40 {
+		@include adaptiveValue("height", 60, 40);
+		@include adaptiveValue("font-size", 17, 14);
+		@include adaptiveValue("padding-left", 24, 15);
+	}
+}
+
+.form__error {
+	position: absolute;
+	z-index: 100;
+	bottom: 22px;
+	left: 22px;
+
+}
+
+.input {
+	&::placeholder {
+		font-weight: 350;
+		color: #666;
+	}
+}
+
+
+.input[placeholder]:not([data-placeholder-nohiden]),
+.header__input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		transition: opacity 0.3s;
+	}
+
+	&:focus::placeholder {
+		opacity: 0;
+	}
+}
+
+textarea.input {
+	resize: none;
+	padding: toRem(24);
+	border-radius: toRem(23);
+
+	.callback-cooperation & {
+		min-height: toRem(195);
+	}
+}

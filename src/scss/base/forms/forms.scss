@@ -1,0 +1,267 @@
+//<FORM>
+// Сниппет (HTML):
+.form {
+	&__row {}
+
+	&__column {}
+
+	&__lines {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: toRem(30);
+		row-gap: toRem(32);
+
+		@media (max-width: toEm(1380)) {
+			grid-template-columns: 1fr 1fr;
+			column-gap: toRem(20);
+		}
+
+		@media (max-width:$mobile) {
+			grid-template-columns: 1fr;
+			row-gap: toRem(25);
+		}
+
+		&_profile {
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 59, 46);
+			}
+		}
+
+		&_password {
+			@include adaptiveValue("margin-bottom", 49, 37);
+		}
+
+		&-information {
+			display: grid;
+			grid-template-rows: repeat(3, auto);
+			grid-template-columns: repeat(6, 1fr);
+			@include adaptiveValue("column-gap", 13, 10);
+			@include adaptiveValue("row-gap", 20, 10);
+
+			.form__line {
+				grid-column: span 2;
+
+				@media (max-width:$mobile) {
+					grid-column: span 3;
+				}
+
+				@media (max-width:$mobileSmall) {
+					grid-column: span 6;
+
+				}
+
+				textarea {
+					@include adaptiveValue("border-radius", 23, 10);
+
+					&::placeholder {
+						@include adaptiveValue("font-size", 17, 14);
+					}
+
+					@media (max-width:$mobile) {
+						padding-left: 15px;
+						padding-top: 12px;
+					}
+				}
+			}
+
+			.form__line_patronymic {
+				@media (max-width:$mobile) {
+					grid-column: span 6;
+				}
+
+				@media (min-width:$mobileSmall) and (max-width: toEm(560)) {
+					grid-column: span 3;
+				}
+			}
+
+			.form__line_mail,
+			.form__line_tel {
+				grid-column: span 3;
+
+				@media (max-width:$mobile) {
+					grid-column: span 3;
+				}
+
+				@media (max-width:$mobileSmall) {
+					grid-column: span 6;
+				}
+			}
+
+			.form__line_mail {
+				@media (max-width: toEm(560)) {
+					grid-column: span 6;
+				}
+			}
+
+
+			.form__line_textarea {
+				grid-column: span 6;
+
+				textarea {
+					@include adaptiveValue("height", 195, 83);
+				}
+			}
+		}
+
+		&-express {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+
+			@include adaptiveValue("margin-bottom", 40, 20);
+			@include adaptiveValue("column-gap", 20, 10);
+			@include adaptiveValue("row-gap", 12, 10);
+
+			.form__line {
+				grid-column: span 2;
+			}
+
+			.form__line_street {
+				grid-column: span 4;
+			}
+
+			&::first-child {}
+		}
+	}
+
+	&__line {
+		position: relative;
+
+		.personal__form & {
+			flex-basis: 33%;
+		}
+
+		&_fio {
+			display: flex;
+			justify-content: space-between;
+			gap: toRem(11);
+
+			margin-bottom: toRem(12);
+
+			@media (max-width:$tablet) {
+				flex-wrap: wrap;
+			}
+		}
+
+		&_bottom {
+			display: flex;
+			align-items: center;
+			gap: toRem(20);
+
+			@include adaptiveValue("margin-top", 32, 22);
+
+			@media (max-width:$mobile) {
+				flex-wrap: wrap;
+			}
+		}
+
+		label {
+			margin-bottom: toRem(17);
+
+			font-weight: 600;
+		}
+
+		&_town {
+			margin-bottom: toRem(32);
+
+			@media (max-width:$mobile) {
+				margin-bottom: toRem(25);
+			}
+		}
+
+		&_geo {
+			@include adaptiveValue("margin-bottom", 43, 20);
+		}
+
+		&_geo {
+			.form-checkout & {
+				@include adaptiveValue("margin-bottom", 43, 16);
+			}
+		}
+
+	}
+
+	&__input {}
+
+	&__button {
+		padding: 0 toRem(56);
+
+		font-size: toRem(18);
+		font-weight: 700;
+		color: #fff;
+		text-transform: uppercase;
+		background-color: $secondaryColor !important;
+		transition: background-color 0.3s;
+
+		@include adaptiveValue("height", 57, 50);
+
+		@media (max-width:$mobile) {
+			font-size: toRem(17);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $mainColor !important;
+			}
+		}
+	}
+
+	&__error {}
+}
+
+
+._dark ._form-focus .form-search__button {
+	svg {
+		path {
+			stroke: #000 !important;
+		}
+	}
+}
+
+._dark ._form-focus .form-search__button {
+	svg {
+		path {
+			stroke: #000 !important;
+			opacity: .5;
+		}
+	}
+}
+
+
+
+//</FORM>
+
+// <BUTTONS>
+// Сниппет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Сниппет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Сниппет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Сниппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сниппет (HTML): sel
+@import "select";
+
+// <RATING>
+// Сниппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сниппет (HTML): qa
+@import "quantity";
+
+// <RANGE>
+// Сниппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сниппет (HTML):
+// @import "datepicker";
