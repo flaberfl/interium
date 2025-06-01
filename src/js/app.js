@@ -37,7 +37,6 @@ import * as flsFunctions from "./files/functions.js";
 flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
 flsFunctions.menuInit();
-flsFunctions.menuInitDesk();
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
 
@@ -95,7 +94,7 @@ flsFunctions.tabs();
 Документация: https://start-template.ru/modul-popup-vytekayushhie-modalnye-okna-chertogi-frilansera-v3-0-0/
 Сниппет (HTML): pl, pop
 */
-import './libs/popup.js'
+// import './libs/popup.js'
 
 /*
 Модуль анимации (параллакс) объектов во время движения мыши
@@ -122,7 +121,7 @@ flsForms.formSubmit();
 
 /* Модуль формы"количество" */
 /* Документация: https://start-template.ru/modul-formy-kolichestvo-chertogi-frilansera-v3-0-0/ */
-flsForms.formQuantity();
+// flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */
 // flsForms.formRating();
@@ -246,7 +245,7 @@ flsScroll.headerScroll();
 
 /* Динамический адаптивный */
 // Документация: https://start-template.ru/modul-dinamicheskij-adaptiv-chertogi-frilansera-v3-0-0/
-import "./libs/dynamic_adapt.js";
+// import "./libs/dynamic_adapt.js";
 
 // ========================================================================================================================================================================================================================================================
 // Другое ========================================================================================================================================================================================================================================================
