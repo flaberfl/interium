@@ -37,13 +37,13 @@
 		gap: 16px;
 		align-items: center;
 
-		@media (max-width: toEm(860)){
-			 width: toRem(530); 
+		@media (max-width: toEm(860)) {
+			width: toRem(530);
 		}
 
-		@media (max-width:$mobile){
-			 width: auto;
-			 flex-direction: column;
+		@media (max-width:$mobile) {
+			width: auto;
+			flex-direction: column;
 		}
 	}
 
@@ -129,7 +129,7 @@
 		display: block;
 		position: relative;
 		width: toRem(17);
-		height: toRem(15);
+		height: toRem(18);
 		z-index: 990;
 
 		@media (any-hover: none) {
@@ -145,19 +145,26 @@
 			position: absolute;
 			width: 100%;
 			height: toRem(3);
-			background-color: $mainColor;
+			background-color: $whiteColor;
+			border-radius: toRem(15);
 		}
 
 		&::before {
-			top: 0;
+			top: toRem(1);
+			right: toRem(7);
+			width: toRem(15);
 		}
 
 		&::after {
-			bottom: 0;
+			bottom: toRem(0);
+			right: toRem(16);
+			width: toRem(15);
 		}
 
 		span {
 			top: calc(50% - toRem(1));
+			width: toRem(24);
+			right: toRem(7);
 		}
 
 		.menu-open & {
@@ -167,16 +174,20 @@
 
 			&::before,
 			&::after {
-				background-color: $mainColor;
+				// background-color: $mainColor;
 			}
 
 			&::before {
-				top: calc(50% - toRem(1));
+				top: toRem(5);
+				// top: calc(50% - toRem(1));
+				right: toRem(7);
 				transform: rotate(-45deg);
 			}
 
 			&::after {
-				bottom: calc(50% - toRem(1));
+				bottom: toRem(10);
+				right: 0.4rem;
+				// bottom: calc(50% - toRem(1));
 				transform: rotate(45deg);
 			}
 		}
