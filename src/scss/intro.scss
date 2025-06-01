@@ -1,0 +1,115 @@
+.intro {
+  padding-top: toRem(190);
+  @include adaptiveValue("padding-top", 190, 45);
+
+  /* .intro__container */
+  &__container {
+    display: grid;
+    grid-template-columns: 53.3% 1fr;
+    // gap: toRem(64);
+    align-items: center;
+    width: 100%;
+
+    @media (max-width:$mobile) {
+      grid-template-columns: auto;
+    }
+  }
+
+  /* .intro__content */
+  &__content {
+    display: flex;
+    flex-direction: column;
+    @include adaptiveValue("padding-top", 180, 10);
+    @include adaptiveValue("padding-bottom", 180, 10);
+    // @include adaptiveValue("padding-left", 60, 10);
+    // @include adaptiveValue("padding-right", 60, 10);
+
+    @media (max-width:$mobile) {
+      //  text-align: center; 
+    }
+  }
+
+  /* .intro__title */
+  &__title {
+    margin-bottom: toRem(15);
+    // max-width: toRem(908);
+  }
+
+  /* .intro__text */
+  &__text {}
+
+  /* .intro__media */
+  &__media {
+    position: relative;
+    width: 100%;
+    right: calc(-10% - 50px);
+    // height: 705px;
+    // border-radius: 35px 0 0 35px;
+    // overflow: hidden;
+
+    @media (max-width: toEm(1195)) {
+      // right: calc(-7% - 50px);
+    }
+
+    @media (max-width:$mobile) {
+      // right: 0;
+      width: 100%;
+      inset: 0;
+      text-align: center;
+      // position: static;
+      grid-row: 1 / 2;
+      // margin: 0 auto;
+
+    }
+
+    @media (max-width:$mobileSmall) {
+      margin: 0 auto;
+      margin-right: -30px;
+      margin-left: -30px;
+    }
+
+
+  }
+
+  /* .intro__img */
+  &__img {
+    inset: 0;
+    max-width: 100%;
+    margin: 0 auto;
+    // margin-right: -10px;
+    // margin-left: -10px;
+    border-radius: 35px 0 0 35px;
+    overflow: hidden;
+
+
+
+    @media (max-width:$mobile) {
+      border-radius: 0;
+      width: 50%;
+    }
+
+    @media (max-width:$mobileSmall) {
+      display: block;
+      margin: 0 auto;
+      margin-right: -30px;
+      margin-left: -30px;
+      width: 100%;
+    }
+  }
+}
+
+.title-h1 {}
+
+.text-b {}
+
+.hero {
+
+  /* .hero__buttons */
+  &__buttons {}
+}
+
+.btn {}
+
+.btn-primary {}
+
+.btn-secondary {}
