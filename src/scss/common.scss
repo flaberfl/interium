@@ -43,6 +43,8 @@
 .btn-primary {
   background: $mustardColor;
   @include adaptiveValue("width", 278, 340);
+
+  span {}
 }
 
 
@@ -50,7 +52,7 @@
   background-color: $whiteColor;
 
   span {
-    color: mustardColor;
+    color: $mustardColor;
   }
 }
 
