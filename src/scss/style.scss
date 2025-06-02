@@ -136,8 +136,8 @@ body {
 			}
 
 			@else {
-				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 20);
-				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 20);
+				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 10);
+				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 10);
 			}
 		}
 	}

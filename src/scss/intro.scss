@@ -17,6 +17,7 @@
 
   /* .intro__content */
   &__content {
+    position: relative;
     background: $grayBackColor;
     border-radius: toRem(35);
 
@@ -102,6 +103,18 @@
       height: toRem(300);
     }
   }
+}
+
+
+.area-text {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  opacity: .1;
+
+  font-size: 180px;
+  font-weight: 700;
+  line-height: 120%;
 }
 
 .title-h1 {}
