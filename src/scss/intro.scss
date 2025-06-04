@@ -5,9 +5,9 @@
   /* .intro__container */
   &__container {
     display: grid;
-    grid-template-columns: 53% 1fr;
+    grid-template-columns: 60.5% 1fr;
     // gap: toRem(14);
-    // align-items: center;
+    align-items: center;
     width: 100%;
 
     @media (max-width:$mobile) {
@@ -18,28 +18,38 @@
   /* .intro__content */
   &__content {
     position: relative;
-    background: $grayBackColor;
-    border-radius: toRem(35);
-
-    margin-left: toRem(-60);
-
-
     display: flex;
     flex-direction: column;
-    @include adaptiveValue("padding-top", 180, 10);
-    @include adaptiveValue("padding-bottom", 180, 10);
+
+    overflow: hidden;
+    background: $grayBackColor;
+    border-radius: toRem(35);
+    z-index: 100;
+    @include adaptiveValue("padding-top", 180, 15);
+    @include adaptiveValue("padding-bottom", 180, 60);
     @include adaptiveValue("padding-left", 60, 10);
-    // @include adaptiveValue("padding-right", 20, 10);
+    @include adaptiveValue("padding-right", 60, 10);
+
+
+    @media (min-width:toEm(1700)) {
+      transform: translate(-60px, 0px);
+    }
 
     @media (max-width:$mobile) {
-      //  text-align: center; 
+      margin-top: toRem(-30);
+      margin-right: -10px;
+      margin-left: -10px;
+      border-radius: toRem(30) toRem(30) 0 0;
     }
+
+    @media (max-width: toEm(600)) {}
   }
+
+
 
   /* .intro__title */
   &__title {
     margin-bottom: toRem(15);
-    // max-width: toRem(908);
   }
 
   /* .intro__text */
@@ -50,57 +60,60 @@
   /* .intro__media */
   &__media {
     position: relative;
-    width: 100%;
-    right: calc(-15% - 50px);
-    // height: 705px;
-    // border-radius: 35px 0 0 35px;
-    // overflow: hidden;
+    right: calc(5.7% - 50px);
+    margin-right: -10px;
+    margin-left: -10px;
 
-    @media (max-width: toEm(1195)) {
-      margin: 0 auto;
-      // right: calc(-7% - 50px);
+
+    @media (min-width:$mobile) {
+      width: 116%;
+      border-radius: 35px 0 0 35px;
     }
+
 
     @media (max-width:$mobile) {
-      // right: 0;
-      width: 100%;
       inset: 0;
-      text-align: center;
-      // position: static;
       grid-row: 1 / 2;
-      // margin: 0 auto;
-
+      text-align: center;
     }
-
-    @media (max-width:$mobileSmall) {
-      // margin: 0 auto;
-    }
-
-
   }
 
   /* .intro__img */
   &__img {
-    margin-left: -30px;
-    margin-right: -30px;
-    border-radius: 35px 0 0 35px;
     overflow: hidden;
 
-
-
     @media (max-width:$mobile) {
-      border-radius: 0;
+      // max-height: toRem(500);
       width: 50%;
     }
 
     @media (max-width:$mobileSmall) {
-      // display: block;
-      // margin: 0 auto;
-      margin-right: -50px;
-      margin-left: -50px;
-      width: 100%;
+      height: toRem(298);
+    }
 
-      height: toRem(300);
+    @media (min-width:$mobile) {
+      border-radius: toRem(35) 0 0 toRem(35);
+    }
+
+    @media (max-width: toEm(500)) {
+      width: 100%;
+    }
+  }
+
+  /* .hero__buttons */
+  &__buttons {
+    width: 100%;
+    // justify-items: center;
+    // align-items: center;
+    display: flex;
+    @include adaptiveValue("gap", 32, 15);
+
+    @media (max-width: toEm(1140)) {
+      flex-wrap: wrap;
+    }
+
+    @media (max-width:$mobile) {
+      justify-content: center;
     }
   }
 }
@@ -108,30 +121,25 @@
 
 .area-text {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  opacity: .1;
+  right: -2%;
+  bottom: -10%;
+  opacity: .05;
 
-  font-size: 180px;
   font-weight: 700;
   line-height: 120%;
-}
 
-.title-h1 {}
+  @include adaptiveValue("font-size", 180, 64);
 
-.text-b {}
-
-.hero {
-
-  /* .hero__buttons */
-  &__buttons {
-    display: flex;
-    gap: toRem(32);
+  @media (max-width:$mobile) {
+    right: 17%;
+    bottom: -4%;
   }
 }
 
-.btn {}
 
-.btn-primary {}
 
-.btn-secondary {}
+
+.btn-primary {
+  justify-items: center;
+  align-items: center;
+}

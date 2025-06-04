@@ -50,6 +50,8 @@
 
 .btn-secondary {
   background-color: $whiteColor;
+  @include adaptiveValue("width", 278, 340);
+
 
   span {
     color: $mustardColor;
