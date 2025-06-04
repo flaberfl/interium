@@ -105,3 +105,36 @@
 .text-ph-b {
   color: $grayColor;
 }
+
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: toRem(70);
+  height: toRem(70);
+
+  border-radius: 50%;
+  background-color: $grayBackColor;
+
+  @media (max-width:$mobile) {
+    width: toRem(60);
+    height: toRem(60);
+  }
+}
+
+
+.about-btn.swiper-button-disabled {
+  svg {
+    path {
+      stroke: $grayColor;
+    }
+  }
+}
+
+.about-btn {
+  svg {
+    path {
+      stroke: $terraсotаColor;
+    }
+  }
+}
