@@ -37,9 +37,10 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 20,
+			// spaceBetween: 20,
+			// centeredSlides: true,
 			// effect: "fade",
-			// autoHeight: true,
+			autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
@@ -48,9 +49,26 @@ function initSliders() {
 			//preloadImages: false,
 			lazy: true,
 
+			slidesPerView: "auto",
+
+
+			effect: "fade",
+			fadeEffect: {
+				crossFade: true
+			},
+
+			// effect: 'creative',
+			// creativeEffect: {
+			// 	prev: {
+			// 		opacity: 0
+			// 	},
+			// 	next: {
+			// 		opacity: 0
+			// 	},
+			// },
 
 			// Эффекты
-			effect: 'fade',
+			// effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
