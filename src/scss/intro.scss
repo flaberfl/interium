@@ -1,5 +1,6 @@
 .intro {
   @include adaptiveValue("padding-top", 190, 45);
+  @include adaptiveValue("padding-bottom", 60, 0);
 
   /* .intro__container */
   &__container {
