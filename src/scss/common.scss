@@ -7,6 +7,10 @@
   @include adaptiveValue("margin-bottom", 30, 15);
 }
 
+.mb-60 {
+  @include adaptiveValue("margin-bottom", 60, 15);
+}
+
 .gap-30 {
   @include adaptiveValue("gap", 30, 15);
 }
