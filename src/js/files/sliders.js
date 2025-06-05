@@ -8,7 +8,7 @@
 //При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 //Пример: { Navigation, Autoplay }
 import Swiper from 'swiper';
-import { Navigation, Pagination, EffectFade, Autoplay } from 'swiper/modules';
+import { Navigation, EffectFade, Autoplay } from 'swiper/modules';
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay,
@@ -33,29 +33,29 @@ function initSliders() {
 		new Swiper('.about__slider', { //Указываем класс нужного слайдера
 			//Подключаем модули слайдера
 			//для конкретного случая
-			modules: [Navigation],
+			modules: [Navigation, EffectFade, Autoplay],
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			spaceBetween: 0,
+			spaceBetween: 20,
 			// effect: "fade",
 			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
 			//simulateTouch: false,
-			// loop: true,
+			loop: true,
 			//preloadImages: false,
 			lazy: true,
 
-			/*
+
 			// Эффекты
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
 				disableOnInteraction: false,
 			},
-			*/
+
 
 
 			// Кнопки "влево/вправо"

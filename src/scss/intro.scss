@@ -1,12 +1,10 @@
 .intro {
-  padding-top: toRem(190);
   @include adaptiveValue("padding-top", 190, 45);
 
   /* .intro__container */
   &__container {
     display: grid;
     grid-template-columns: 60.5% 1fr;
-    // gap: toRem(14);
     align-items: center;
     width: 100%;
 
@@ -83,7 +81,6 @@
     overflow: hidden;
 
     @media (max-width:$mobile) {
-      // max-height: toRem(500);
       width: 50%;
     }
 
@@ -100,13 +97,10 @@
     }
   }
 
-  /* .hero__buttons */
+  /* .intro__buttons */
   &__buttons {
     width: 100%;
-    // justify-items: center;
-    // align-items: center;
     display: flex;
-    @include adaptiveValue("gap", 32, 15);
 
     @media (max-width: toEm(1140)) {
       flex-wrap: wrap;
@@ -117,7 +111,6 @@
     }
   }
 }
-
 
 .area-text {
   position: absolute;
@@ -134,12 +127,4 @@
     right: 17%;
     bottom: -4%;
   }
-}
-
-
-
-
-.btn-primary {
-  justify-items: center;
-  align-items: center;
 }

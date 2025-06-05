@@ -1,0 +1,99 @@
+.about {
+
+	/* .about__container */
+	&__container {}
+
+	/* .about__title */
+	&__title {}
+
+	/* .about__text */
+	&__text {}
+
+	/* .about__items */
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+
+		@media (max-width:$mobile) {
+			grid-template-columns: auto;
+		}
+	}
+
+	/* .about__item */
+	&__item {
+		display: flex;
+
+		align-items: center;
+
+		background: $grayBackColor;
+		background: red;
+
+		gap: toRem(15);
+		@include adaptiveValue("padding", 30, 15);
+	}
+
+	/* .about__icon */
+	&__icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex: 0 0 toRem(50);
+
+		background: $whiteColor;
+		border-radius: 50%;
+
+		@include adaptiveValue("width", 50, 40);
+		@include adaptiveValue("height", 50, 40);
+
+		@media (max-width:$mobile) {
+			flex: 0 0 toRem(40);
+		}
+	}
+
+	/* .about__gallery */
+	&__gallery {}
+
+	/* .about__slider */
+	&__slider {
+		@include adaptiveValue("border-radius", 35, 30);
+	}
+
+	/* .about__wrapper */
+	&__wrapper {}
+
+	/* .about__slide */
+	&__slide {}
+
+	/* .about__footer */
+	&__footer {}
+
+	/* .about__buttons */
+	&__buttons {}
+
+	/* .about__slider-btn */
+	&__slider-btn {}
+}
+
+.title-h2 {}
+
+.text {}
+
+.text-b {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.btn {}
+
+.btn-primary {}
+
+.btn-secondary {}
+
+.about-btn {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}

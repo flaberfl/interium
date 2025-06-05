@@ -1,10 +1,22 @@
+.section-60 {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
+}
+
+.mb-30 {
+  @include adaptiveValue("margin-bottom", 30, 15);
+}
+
+.gap-30 {
+  @include adaptiveValue("gap", 30, 15);
+}
+
 .btn {
   cursor: pointer;
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: center;
-  // border-radius: toRem(35);
   padding: toRem(14) toRem(32);
 
   @include adaptiveValue("height", 70, 60);
@@ -40,21 +52,33 @@
   @include adaptiveValue("width", 306, 340);
 }
 
-.btn-primary {
-  background: $mustardColor;
-  @include adaptiveValue("width", 278, 340);
 
-  span {}
+.btn-primary,
+.btn-secondary {
+  @include adaptiveValue("width", 278, 340);
+}
+
+.intro .btn-primary {
+  background: $mustardColor;
 }
 
 
-.btn-secondary {
+.intro .btn-secondary {
   background-color: $whiteColor;
-  @include adaptiveValue("width", 278, 340);
-
 
   span {
     color: $mustardColor;
+  }
+}
+
+.about .btn-primary {
+  background: $terraсotаColor;
+}
+
+.about .btn-secondary {
+
+  span {
+    color: $terraсotаColor;
   }
 }
 
