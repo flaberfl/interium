@@ -1,4 +1,5 @@
 .about {
+
 	/* .about__items */
 	&__items {
 		display: grid;
@@ -12,14 +13,13 @@
 	/* .about__item */
 	&__item {
 		display: flex;
-
 		align-items: center;
+		gap: toRem(15);
 
 		background: $grayBackColor;
-		background: red;
 
-		gap: toRem(15);
 		@include adaptiveValue("padding", 30, 15);
+		@include adaptiveValue("border-radius", 35, 30);
 	}
 
 	/* .about__icon */
