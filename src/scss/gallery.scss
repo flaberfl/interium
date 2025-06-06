@@ -1,7 +1,7 @@
 .gallery {
 
   @include adaptiveValue("padding-top", 90, 30);
-  @include adaptiveValue("padding-bottom", 90, 30);
+  @include adaptiveValue("padding-bottom", 130, 30);
 
   /* .gallery__container */
   &__container {}

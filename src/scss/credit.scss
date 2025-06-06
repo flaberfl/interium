@@ -6,8 +6,13 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width:$mobile){
-       flex-direction: column; 
+    background: $grayBackColor;
+
+    @include adaptiveValue("padding-left", 60, 0);
+    @include adaptiveValue("border-radius", 35, 30);
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
     }
   }
 
@@ -29,9 +34,9 @@
       margin-right: -10px;
     }
 
-    @media (max-width:$mobile){
+    @media (max-width:$mobile) {
       //  margin: 0 auto;
-       margin-left: auto; 
+      margin-left: auto;
     }
   }
 
