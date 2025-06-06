@@ -1,0 +1,49 @@
+.gallery {
+
+  /* .gallery__container */
+  &__container {}
+
+  /* .gallery__title */
+  &__title {}
+
+  /* .gallery__wrapper */
+  &__wrapper {}
+
+  /* .gallery__slider */
+  &__slider {}
+
+  /* .gallery__slide */
+  &__slide {
+    overflow: hidden;
+
+    @include adaptiveValue("border-radius", 35, 30);
+
+    a,
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width:$mobile) {
+      text-align: center;
+    }
+  }
+
+  /* .gallery__slider-btn */
+  &__slider-btn {}
+}
+
+.title-h2 {}
+
+.mb-60 {}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.gallery-btn {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}

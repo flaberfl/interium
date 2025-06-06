@@ -221,21 +221,21 @@ function initSliders() {
 				},
 				640: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 10,
 					// autoHeight: true,
 				},
 				768: {
 					slidesPerView: 2,
-					spaceBetween: 10,
+					spaceBetween: 20,
 				},
 				992: {
 
 					slidesPerView: 3,
-					spaceBetween: 10,
+					spaceBetween: 30,
 				},
 				1920: {
 					slidesPerView: 3,
-					spaceBetween: 10,
+					spaceBetween: 30,
 				},
 			},
 
