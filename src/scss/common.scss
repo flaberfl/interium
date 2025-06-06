@@ -89,6 +89,20 @@
 }
 
 
+.tenant .btn-primary,
+.tenant .btn-secondary {
+  @include adaptiveValue("width", 420, 340);
+}
+
+.tenant .btn-primary {
+  background: $garkGreenColor;
+}
+
+.tenant .btn-secondary {
+  span {
+    color: $garkGreenColor;
+  }
+}
 
 
 

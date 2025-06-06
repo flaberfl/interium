@@ -3,12 +3,9 @@
 	padding-bottom: toRem(60);
 
 
-
 	&__wrapper {
 		background: $grayBackColor;
-		background: red;
-
-
+		// background: red;
 	}
 
 	/* .tenant__container */
@@ -18,9 +15,6 @@
 		grid-template-columns: 1fr 1fr;
 		justify-content: space-between;
 		position: relative;
-
-
-
 	}
 
 	/* .tenant__content */
@@ -45,7 +39,9 @@
 	}
 
 	/* .tenant__buttons */
-	&__buttons {}
+	&__buttons {
+		display: flex;
+	}
 
 	/* .tenant__media */
 	&__media {
@@ -64,7 +60,6 @@
 	&__image {
 		// height: auto;
 		overflow: visible;
-		// @include adaptiveValue("height", 792, 360);
 	}
 
 	/* .tenant__promo */
@@ -82,7 +77,6 @@
 	&__title {
 		min-height: toRem(110);
 		background-color: $whiteColor;
-		// @include adaptiveValue("border-radius", 35, 30);
 	}
 
 	/* .spollers__body */

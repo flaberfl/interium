@@ -11,59 +11,133 @@
 		justify-content: center;
 		align-items: center;
 		position: relative;
-		width: 50px;
-		height: 50px;
-		background: $garkGreenColor;
+		border-radius: 50%;
+
+		@include adaptiveValue("width", 48, 40);
+		@include adaptiveValue("height", 48, 40);
+
+		&::before {
+			content: '';
+			position: absolute;
+			transition: all 0.3s;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background: $garkGreenColor;
+			border: 2px solid $garkGreenColor;
+		}
 
 
+		svg {
+			position: relative;
+			z-index: 100;
 
-		._spoller-init & {
-			cursor: pointer;
+		}
+
+		._spoller-active & {
+			&::before {
+				content: '';
+				background: $whiteColor;
+			}
+
+			svg {
+				transform: rotate(-180deg);
+
+				path {
+					stroke: $garkGreenColor;
+				}
+			}
+
+		}
+	}
+}
+
+// Спойлер
+.spollers__item {
+	overflow: hidden;
+	// font-size: toRem(20);
+	@include adaptiveValue("border-radius", 35, 30);
+}
+
+// Заголовок спойлера
+.spollers__title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	cursor: default;
+	text-align: left;
+	position: relative;
+	list-style: none;
+
+	font-size: toRem(20);
+	font-weight: 600;
+	line-height: 140%;
+	color: $mainColor;
+
+	transition: all 0.3s;
+	padding-top: toRem(30);
+	padding-bottom: toRem(30);
+	@include adaptiveValue("padding-left", 30, 15);
+	@include adaptiveValue("padding-right", 30, 15);
+
+
+	@media (max-width:$mobile) {
+		font-size: toRem(18);
+	}
+
+	&::marker,
+	&::-webkit-details-marker {
+		display: none;
+	}
+
+	._spoller-init & {
+		cursor: pointer;
+
+		// &::before,
+		// &::after {
+		// 	content: "";
+		// 	position: absolute;
+		// 	right: toRem(26);
+		// 	top: 50%;
+		// 	background-color: #000;
+		// 	height: 2px;
+		// 	width: 9px;
+		// 	transition: transform 0.5s ease 0s;
+
+		// 	@media (max-width: toEm(660)) {
+		// 		top: 20%;
+		// 	}
+		// }
+
+		// &::before {
+		// 	transform: translate(-75%, -50%) rotate(40deg);
+		// }
+
+		// &::after {
+		// 	transform: translate(0, -50%) rotate(-40deg);
+		// }
+
+		&._spoller-active {
+
+			color: $garkGreenColor;
 
 			&::before,
 			&::after {
-				content: "";
-				position: absolute;
-				// right: toRem(26);
-				// top: 50%;
-				background-color: #000;
-				height: 2px;
-				width: 9px;
-				transition: transform 0.5s ease 0s;
+				background-color: $mainColor;
 
-				@media (max-width: toEm(660)) {
-					// top: 20%;
-				}
 			}
 
 			&::before {
-				transform: translate(-75%, -50%) rotate(40deg);
+				transform: translateX(-75%) rotate(-40deg);
 			}
 
 			&::after {
-				transform: translate(0, -50%) rotate(-40deg);
+				transform: rotate(40deg);
 			}
+		}
 
-			&._spoller-active {
-
-				color: $garkGreenColor;
-
-				&::before,
-				&::after {
-					background-color: $mainColor;
-					display: none;
-				}
-
-				&::before {
-					transform: translateX(-75%) rotate(-40deg);
-				}
-
-				&::after {
-					transform: rotate(40deg);
-				}
-			}
-
-			/*
+		/*
 		._spoller-init & {
 			position: relative;
 			width: 100%;
@@ -96,48 +170,7 @@
 			}
 		}
 		*/
-		}
 	}
-}
-
-// Спойлер
-.spollers__item {
-	overflow: hidden;
-	// font-size: toRem(20);
-	@include adaptiveValue("border-radius", 35, 30);
-}
-
-// Заголовок спойлера
-.spollers__title {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	cursor: default;
-	text-align: left;
-	position: relative;
-	list-style: none;
-
-	font-size: toRem(20);
-	font-weight: 600;
-	line-height: 140%;
-	color: $mainColor;
-
-	padding-top: toRem(30);
-	padding-bottom: toRem(30);
-	@include adaptiveValue("padding-left", 30, 15);
-	@include adaptiveValue("padding-right", 30, 15);
-
-	@media (max-width:$mobile) {
-		font-size: toRem(18);
-	}
-
-	&::marker,
-	&::-webkit-details-marker {
-		display: none;
-	}
-
-
 
 }
 
