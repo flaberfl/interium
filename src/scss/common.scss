@@ -104,6 +104,16 @@
   }
 }
 
+.zoning .btn-outline {
+  border: 2px solid $mustardColor;
+
+  @include adaptiveValue("width", 320, 340);
+
+  span {
+    color: $mustardColor;
+  }
+}
+
 
 
 
@@ -181,6 +191,22 @@
 }
 
 .about-btn {
+  svg {
+    path {
+      stroke: $mustardColor;
+    }
+  }
+}
+
+.zoning-btn.swiper-button-disabled {
+  svg {
+    path {
+      stroke: $grayColor;
+    }
+  }
+}
+
+.zoning-btn {
   svg {
     path {
       stroke: $terraсotаColor;

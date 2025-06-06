@@ -1,0 +1,67 @@
+.zoning {
+
+  /* .zoning__container */
+  &__container {}
+
+  /* .zoning__title */
+  &__title {}
+
+  /* .zoning__gallery */
+  &__gallery {
+    position: relative;
+  }
+
+  /* .zoning__slider */
+  &__slider {}
+
+  /* .zoning__wrapper */
+  &__wrapper {}
+
+  /* .zoning__slide */
+  &__slide {
+
+    a,
+    img {
+      max-width: 100%;
+    }
+
+    @media (max-width:$mobile) {
+      text-align: center;
+    }
+  }
+
+  /* .zoning__footer */
+  &__footer {
+    position: relative;
+    display: flex;
+
+    @media (max-width:$mobile){
+       justify-content: center; 
+    }
+  }
+
+  /* .zoning__slider-btn */
+  &__slider-btn {
+    position: absolute;
+    right: 0;
+
+
+    @media (max-width:$tablet) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      top: 50%;
+      padding-right: 10px;
+      padding-left: 10px;
+      transform: translate(0px, -50%);
+      z-index: 100;
+    }
+  }
+}
+
+
+.zoning-btn {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
