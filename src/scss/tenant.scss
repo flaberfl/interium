@@ -2,19 +2,21 @@
 	padding-top: toRem(56);
 	padding-bottom: toRem(60);
 
-
 	&__wrapper {
 		background: $grayBackColor;
-		// background: red;
 	}
 
 	/* .tenant__container */
 	&__container {
 		display: grid;
 		align-items: center;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: 52% auto;
 		justify-content: space-between;
 		position: relative;
+
+		@media (max-width:$tablet) {
+			grid-template-columns: auto;
+		}
 	}
 
 	/* .tenant__content */
@@ -41,30 +43,70 @@
 	/* .tenant__buttons */
 	&__buttons {
 		display: flex;
+		justify-content: center;
+
+		@media (max-width:$mobile) {
+			flex-wrap: wrap;
+		}
 	}
 
 	/* .tenant__media */
 	&__media {
 		overflow: hidden;
-		margin-bottom: -30px;
-		margin-top: -30px;
-
 		position: relative;
-		right: calc(-7.3% - 50px);
+		border-radius: toRem(30);
+		margin-bottom: -30px;
 
-		// @include adaptiveValue("border-radius", 35, 30);
-		border-radius: toRem(30) 0 0 toRem(30);
+		@media (min-width:$tablet) {
+			border-radius: toRem(30) 0 0 toRem(30);
+			right: calc(-9.3% - 50px);
+			margin-top: -30px;
+		}
+
+		@media (max-width:$tablet) {
+			justify-self: center;
+			width: 50%;
+		}
+
+		@media (max-width:$mobile) {
+			width: 65%;
+		}
+
+		@media (max-width: toEm(550)) {
+			width: 100%;
+		}
+
+
+		@media (max-width:$mobileSmall) {
+			margin-right: -10px;
+			margin-left: -10px;
+		}
 	}
 
 	/* .tenant__image */
 	&__image {
-		// height: auto;
 		overflow: visible;
+		z-index: 50;
 	}
 
 	/* .tenant__promo */
 	&__promo {
+		max-width: toRem(550);
 		position: absolute;
+		// bottom: toRem(60);
+		left: toRem(30);
+		z-index: 100;
+
+		@include adaptiveValue("bottom", 60, 30);
+		@include adaptiveValue("left", 60, 30);
+
+		@media (max-width: em(1460)) {
+			max-width: toRem(400);
+		}
+
+		@media (max-width: em(1110)) {
+			max-width: toRem(360);
+		}
 	}
 }
 
