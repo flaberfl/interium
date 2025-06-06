@@ -213,3 +213,20 @@
     }
   }
 }
+
+
+.gallery-btn.swiper-button-disabled {
+  svg {
+    path {
+      stroke: $grayColor;
+    }
+  }
+}
+
+.gallery-btn {
+  svg {
+    path {
+      stroke: $blueColor;
+    }
+  }
+}

@@ -7,20 +7,26 @@
   &__title {}
 
   /* .gallery__wrapper */
-  &__wrapper {}
+  &__wrapper {
+    position: relative;
+  }
 
   /* .gallery__slider */
   &__slider {}
 
   /* .gallery__slide */
   &__slide {
-    overflow: hidden;
+    // overflow: hidden;
 
-    @include adaptiveValue("border-radius", 35, 30);
+    // @include adaptiveValue("border-radius", 35, 30);
 
     a,
     img {
       max-width: 100%;
+    }
+
+    img {
+      @include adaptiveValue("border-radius", 35, 30);
     }
 
     @media (max-width:$mobile) {
@@ -29,7 +35,21 @@
   }
 
   /* .gallery__slider-btn */
-  &__slider-btn {}
+  &__slider-btn {
+    position: absolute;
+    right: 0;
+
+    @media (max-width:$tablet) {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      top: 50%;
+      padding-right: 10px;
+      padding-left: 10px;
+      transform: translate(0px, -50%);
+      z-index: 100;
+    }
+  }
 }
 
 .title-h2 {}
