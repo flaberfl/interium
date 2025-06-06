@@ -103,11 +103,16 @@
 
 
 .title-h1,
-.title-h2 {
+.title-h2,
+.title-h2-w {
   font-weight: 600;
   line-height: 120%;
   color: $mainColor;
   @include adaptiveValue("font-size", 48, 32);
+}
+
+.title-h2-w {
+  color: $whiteColor;
 }
 
 

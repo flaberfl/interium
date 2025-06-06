@@ -1,0 +1,84 @@
+.tenant {
+	padding-top: toRem(56);
+	padding-bottom: toRem(60);
+
+
+
+	&__wrapper {
+		background: $grayBackColor;
+		background: red;
+
+
+	}
+
+	/* .tenant__container */
+	&__container {
+		display: grid;
+		align-items: center;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-between;
+		position: relative;
+
+
+
+	}
+
+	/* .tenant__content */
+	&__content {
+		position: relative;
+		@include adaptiveValue("padding-top", 72, 30);
+		@include adaptiveValue("padding-bottom", 72, 30);
+	}
+
+	/* .tenant__title */
+	&__title {}
+
+	/* .tenant__spoller */
+	&__spoller {
+		position: relative;
+
+		.spollers {
+			position: relative;
+		}
+	}
+
+	/* .tenant__buttons */
+	&__buttons {}
+
+	/* .tenant__media */
+	&__media {
+		overflow: hidden;
+		margin-bottom: -30px;
+		margin-top: -30px;
+
+		position: relative;
+		right: calc(-7.3% - 50px);
+
+		// @include adaptiveValue("border-radius", 35, 30);
+		border-radius: toRem(30) 0 0 toRem(30);
+	}
+
+	/* .tenant__image */
+	&__image {
+		// height: auto;
+		overflow: visible;
+		// @include adaptiveValue("height", 792, 360);
+	}
+
+	/* .tenant__promo */
+	&__promo {
+		position: absolute;
+	}
+}
+
+.spollers {
+
+	/* .spollers__item */
+	&__item {}
+
+	/* .spollers__title */
+	&__title {}
+
+	/* .spollers__body */
+	&__body {}
+}
