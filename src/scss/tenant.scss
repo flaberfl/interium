@@ -31,7 +31,9 @@
 	}
 
 	/* .tenant__title */
-	&__title {}
+	&__title {
+		margin-bottom: toRem(15);
+	}
 
 	/* .tenant__spoller */
 	&__spoller {
@@ -77,7 +79,11 @@
 	&__item {}
 
 	/* .spollers__title */
-	&__title {}
+	&__title {
+		min-height: toRem(110);
+		background-color: $whiteColor;
+		// @include adaptiveValue("border-radius", 35, 30);
+	}
 
 	/* .spollers__body */
 	&__body {}
