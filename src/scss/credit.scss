@@ -4,8 +4,6 @@
   &__container {
     display: flex;
     align-items: center;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
     justify-content: space-between;
 
     @media (max-width:$mobile){
