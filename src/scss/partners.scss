@@ -10,21 +10,17 @@
 
     display: flex;
     align-items: center;
-
+    padding-top: 33px;
   }
 
   &__group {
     display: flex;
     align-items: center;
-
-
+    will-change: transform;
 
     @include adaptiveValue("gap", 60, 30);
 
     &_1 {
-
-
-
       animation: marquee1 20s infinite linear;
       animation-delay: -20s;
     }
@@ -38,7 +34,11 @@
   /* .partners__img */
   &__img {
     white-space: nowrap;
+    // max-width: 100%;
 
+    @media (max-width:$mobile) {
+      //  width: 62.5%; 
+    }
   }
 }
 
