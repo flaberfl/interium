@@ -1,33 +1,20 @@
 .gallery {
 
-  @include adaptiveValue("padding-top", 90, 30);
+  @include adaptiveValue("padding-top", 90, 15);
   @include adaptiveValue("padding-bottom", 130, 30);
-
-  /* .gallery__container */
-  &__container {}
-
-  /* .gallery__title */
-  &__title {}
 
   /* .gallery__wrapper */
   &__wrapper {
     position: relative;
   }
 
-  /* .gallery__slider */
-  &__slider {}
-
   /* .gallery__slide */
   &__slide {
-    // overflow: hidden;
-
-    // @include adaptiveValue("border-radius", 35, 30);
 
     a,
     img {
       max-width: 100%;
     }
-
     img {
       @include adaptiveValue("border-radius", 35, 30);
     }
@@ -56,19 +43,3 @@
     }
   }
 }
-
-.title-h2 {}
-
-.mb-60 {}
-
-.swiper {}
-
-.swiper-wrapper {}
-
-.swiper-slide {}
-
-.gallery-btn {}
-
-.swiper-button-prev {}
-
-.swiper-button-next {}

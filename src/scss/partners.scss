@@ -1,7 +1,8 @@
 .partners {
   // overflow-x: hidden;
   white-space: nowrap;
-  @include adaptiveValue("padding-bottom", 90, 30);
+
+  @include adaptiveValue("padding-bottom", 90, 0);
 
   /* .partners__items */
   &__items {

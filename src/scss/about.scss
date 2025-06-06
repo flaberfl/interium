@@ -47,6 +47,7 @@
 
 	/* .about__slider */
 	&__slider {
+		// min-height: toRem(500);
 		@include adaptiveValue("border-radius", 35, 30);
 	}
 
@@ -54,8 +55,11 @@
 	/* .about__slide */
 	&__slide {
 		min-height: toRem(340);
-		height: 100%;
 		text-align: center;
+		height: 100%;
+		
+		@media (min-width:toEm(560)){
+		}
 
 
 		img {

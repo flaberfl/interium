@@ -1,10 +1,13 @@
 .zoning {
+  padding-top: 34px;
 
   /* .zoning__container */
   &__container {}
 
   /* .zoning__title */
-  &__title {}
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 40);
+  }
 
   /* .zoning__gallery */
   &__gallery {

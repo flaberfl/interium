@@ -34,7 +34,7 @@ body::after {
 
 .popup_show {
 	// z-index: 150;
-	z-index: 601;
+	z-index: 999;
 	visibility: visible;
 	overflow: auto;
 	pointer-events: auto;
@@ -81,10 +81,9 @@ body::after {
 	transition: all 0.6s ease 0s;
 	background-color: #fff;
 	width: 100%;
-	max-width: toRem(700);
-	min-height: toRem(629);
+	max-width: toRem(1920);
+	min-height: 100vh;
 
-	@include adaptiveValue("border-radius", 30, 0);
 	@include adaptiveValue("padding-top", 17, 12);
 	@include adaptiveValue("padding-bottom", 17, 12);
 	@include adaptiveValue("padding-left", 17, 12);
@@ -127,14 +126,28 @@ body::after {
 }
 
 .popup__close {
-	display: block;
+	// display: block;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	margin-left: auto;
+
+	background: $grayBackColor;
+	border-radius: 50%;
+
+	@include adaptiveValue("width", 70, 40);
+	@include adaptiveValue("height", 70, 40);
+
+	svg {
+		@include adaptiveValue("width", 24, 10);
+		@include adaptiveValue("height", 24, 10);
+	}
 
 	@media (any-hover: hover) {
 		&:hover {
 			svg {
 				path {
-					stroke: $secondaryColor;
+					stroke: $mainColor;
 				}
 			}
 		}
@@ -147,7 +160,6 @@ body::after {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-height: toRem(582);
 	justify-content: center;
 
 	padding-bottom: toRem(56);
@@ -156,23 +168,7 @@ body::after {
 	@include adaptiveValue("padding-left", 83, 0);
 	@include adaptiveValue("padding-right", 83, 0);
 
-	&_promocode {
-		min-height: 0;
-	}
 
-	&_promo {
-		@include adaptiveValue("padding-left", 47, 0);
-		@include adaptiveValue("padding-right", 47, 0);
-	}
-
-	&_cart {
-		display: block;
-
-		@include adaptiveValue("padding-top", 48, 0);
-		@include adaptiveValue("padding-left", 53, 17);
-		@include adaptiveValue("padding-right", 53, 17);
-		@include adaptiveValue("padding-bottom", 57, 17);
-	}
 }
 
 .popup__title {
@@ -183,7 +179,7 @@ body::after {
 
 	span {
 		cursor: pointer;
-		color: $secondaryColor;
+		color: $mainColor;
 		// text-decoration: underline;
 	}
 
@@ -230,7 +226,7 @@ body::after {
 
 		span {
 			cursor: auto;
-			color: $secondaryColor;
+			color: $mainColor;
 			@include adaptiveValue("font-size", 47, 31);
 		}
 
@@ -271,15 +267,15 @@ body::after {
 }
 
 .popup__button {
-	border: 1px solid $secondaryColor;
+	border: 1px solid $mainColor;
 	margin-bottom: toRem(17);
-	color: $secondaryColor;
+	color: $mainColor;
 
 	transition: all 0.3s;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $secondaryColor;
+			background-color: $mainColor;
 			color: #fff;
 		}
 	}
@@ -326,7 +322,7 @@ body::after {
 
 .popup__text-send {
 	font-size: toRem(17);
-	color: $subColor;
+	color: $mainColor;
 }
 
 .popup__form__lines {
@@ -350,7 +346,7 @@ body::after {
 	color: #999;
 
 	a {
-		color: $secondaryColor;
+		color: $mainColor;
 		text-decoration: underline;
 	}
 }
@@ -377,7 +373,7 @@ body::after {
 		align-self: flex-start;
 		text-align: left;
 
-		color: $subColor;
+		color: $mainColor;
 		@include adaptiveValue("font-size", 20, 17);
 
 		@include adaptiveValue("margin-bottom", 38, 23);
