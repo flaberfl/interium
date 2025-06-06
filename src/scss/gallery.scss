@@ -1,5 +1,8 @@
 .gallery {
 
+  @include adaptiveValue("padding-top", 90, 30);
+  @include adaptiveValue("padding-bottom", 90, 30);
+
   /* .gallery__container */
   &__container {}
 
@@ -36,8 +39,10 @@
 
   /* .gallery__slider-btn */
   &__slider-btn {
+    display: flex;
     position: absolute;
     right: 0;
+    gap: toRem(15);
 
     @media (max-width:$tablet) {
       display: flex;
