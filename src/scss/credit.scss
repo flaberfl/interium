@@ -1,0 +1,44 @@
+.credit {
+
+  /* .credit__container */
+  &__container {
+    display: flex;
+    align-items: center;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+
+    @media (max-width:$mobile){
+       flex-direction: column; 
+    }
+  }
+
+  /* .credit__content */
+  &__content {
+    flex: 0 1 60%;
+  }
+
+  /* .credit__title */
+  &__title {
+    margin-bottom: toRem(15);
+  }
+
+  /* .credit__text */
+  &__text {}
+
+  &__media {
+    @media (max-width: toEm(1700)) {
+      margin-right: -10px;
+    }
+
+    @media (max-width:$mobile){
+      //  margin: 0 auto;
+       margin-left: auto; 
+    }
+  }
+
+  /* .credit__image */
+  &__image {
+    max-width: 100%;
+  }
+}
