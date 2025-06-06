@@ -1,48 +1,35 @@
 .partners {
-  overflow-x: hidden;
+  // overflow-x: hidden;
   white-space: nowrap;
   @include adaptiveValue("padding-bottom", 90, 30);
 
   /* .partners__items */
   &__items {
-    overflow-x: hidden;
+    // overflow-x: hidden;
 
 
     display: flex;
     align-items: center;
 
-
-    // display: inline-block;
-
-    // @include adaptiveValue("gap", 60, 30);
-
-    // @media (any-hover: hover) {
-    //   &:hover {
-    //     animation-play-state: paused;
-    //   }
-    // }
   }
 
   &__group {
     display: flex;
     align-items: center;
-    // white-space: nowrap;
 
-    will-change: transform;
+
+
     @include adaptiveValue("gap", 60, 30);
 
-
     &_1 {
+
+
+
       animation: marquee1 20s infinite linear;
       animation-delay: -20s;
-
-
-      // margin-right: 130px;
-      // @include adaptiveValue("margin-right", 60, 30);
     }
 
     &_2 {
-// margin-left: 60px;
       animation: marquee2 20s infinite linear;
       animation-delay: -10s;
     }
