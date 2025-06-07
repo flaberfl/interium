@@ -4,41 +4,9 @@
 	min-width: 0;
 	position: relative;
 
-
-	.item-total & {
-		font-size: toRem(12);
-	}
-
 	// .select__body
 	&__body {
 		position: relative;
-
-		.item-total & {
-			height: toRem(26);
-
-			@media (max-width:$mobileSmall){
-				 width: toRem(95); 
-			}
-		}
-
-		.geo-icon & {
-			&::after {
-				content: '';
-				position: absolute;
-				background: url('@img/account/geo.svg') 0 0 no-repeat;
-				z-index: 20;
-				width: toRem(18);
-				height: toRem(22);
-				left: toRem(24);
-				top: 50%;
-				transform: translate(0px, -50%);
-
-				.form-checkout & {
-					@include adaptiveValue("left", 24, 13);
-
-				}
-			}
-		}
 	}
 
 	// .select__title
@@ -51,8 +19,8 @@
 		width: 100%;
 		color: #666;
 
-		border-radius: toRem(50);
 
+@include adaptiveValue("border-radius", 35, 30);
 
 		._select-open & {
 			color: inherit;
@@ -60,20 +28,6 @@
 		}
 
 		._select-open & {
-			.filter & {
-				color: inherit;
-				// border: none;
-				border: 1px solid #e2e2e2;
-			}
-
-			.item-total & {
-				border: 1px solid #ececec;
-				border-radius: toRem(16) toRem(16) 0 0;
-			}
-		}
-
-		.geo-icon & {
-			border: 1px solid #ececec;
 		}
 
 		._select-open & {
@@ -128,36 +82,11 @@
 		gap: toRem(10);
 
 
-		.filter & {
-			padding-left: toRem(20);
-			font-size: toRem(18);
-		}
 
 		._select-open & {
-			.filter & {
-				// border-bottom: 2px solid #ededed;
-			}
+
 		}
 
-		.item-total & {
-			height: toRem(26);
-			padding-right: toRem(3);
-
-			@media (max-width:$mobile) {
-				padding: 0 toRem(10);
-				padding-right: toRem(0);
-			}
-		}
-
-		.personal__form & {
-			padding-left: toRem(48);
-			height: toRem(58);
-		}
-
-		.checkout__form .geo-icon & {
-			@include adaptiveValue("padding-left", 48, 33);
-			@include adaptiveValue("height", 56, 42);
-		}
 
 		>* {
 			flex: 1 1 auto;
@@ -224,7 +153,7 @@
 		}
 
 		&::placeholder {
-			color: #000;
+			color: red;
 		}
 	}
 

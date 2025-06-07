@@ -33,13 +33,25 @@
 
 					<div class="form__row form__row_about">
 						<div class="form__item">
-							<input type="text" name="company" data-error="Заполните поле!" placeholder="Название компании"
+							<input type="text" name="company" data-required data-error="Заполните поле!" placeholder="Название компании"
 								class="input">
 						</div>
 						<div class="form__item">
-							<input type="text" name="brand" data-error="Заполните поле!" placeholder="Торговая марка / бренд"
+							<input type="text" name="brand" data-required data-error="Заполните поле!" placeholder="Торговая марка / бренд"
 								class="input">
 						</div>
+
+						<div class="form__item">
+
+<select name="form[]" data-class-modif="form">
+	<option data-show2 value="" selected>Тип компании</option>
+	<option value="2">Пункт №2</option>
+	<option value="3">Пункт №3</option>
+	<option value="4">Пункт №4</option>
+</select>
+
+						</div>
+
 					</div>
 
 
