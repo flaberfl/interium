@@ -118,14 +118,6 @@
 
 
 
-
-
-
-
-
-
-
-
 .title-h1,
 .title-h2,
 .title-h2-w {
@@ -139,8 +131,15 @@
   color: $whiteColor;
 }
 
+.title-h2-mod {
+  font-weight: 600;
+  line-height: 120%;
+  color: $mainColor;
+  @include adaptiveValue("font-size", 36, 24);
+}
 
-// Основной текс
+
+// Основной текст
 .text,
 // Основной текс с жирностью 500
 .text-b,
@@ -213,7 +212,6 @@
     }
   }
 }
-
 
 .gallery-btn.swiper-button-disabled {
   svg {

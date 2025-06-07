@@ -15,17 +15,36 @@
 	<div class="popup__wrapper">
 
 		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="black" stroke-width="2"
-						stroke-linecap="round" stroke-linejoin="round" />
-				</svg>
-			</button>
+			<div class="popup__top-line">
+				<h1 class="popup__title title-h1">Оставить заявку</h1>
+				<button data-close type="button" class="popup__close">
+					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M21 21L12 12M12 12L3 3M12 12L21.0001 3M12 12L3 21.0001" stroke="black" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</button>
+			</div>
 
 
 
-			<div class="popup__text popup__text_cart">
-				feeff
+			<div class="popup__text">
+
+				<form class="form" action="">
+
+					<div class="form__row form__row_about">
+						<div class="form__item">
+							<input type="text" name="company" data-error="Заполните поле!" placeholder="Название компании"
+								class="input">
+						</div>
+						<div class="form__item">
+							<input type="text" name="brand" data-error="Заполните поле!" placeholder="Торговая марка / бренд"
+								class="input">
+						</div>
+					</div>
+
+
+
+				</form>
 
 			</div>
 		</div>

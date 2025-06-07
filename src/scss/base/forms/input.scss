@@ -10,20 +10,25 @@ textarea {
 }
 
 .input {
-	border-radius: toRem(50);
+	border-radius: toRem(35);
 	width: 100%;
 	display: block;
-	padding: 0 toRem(24);
+	padding: toRem(20);
 	caret-color: inherit;
-	height: toRem(60);
+	height: toRem(70);
 
 	border: 1px solid #ececec;
-	backdrop-filter: blur(9px);
-	background: rgba(255, 255, 255, 0.6);
+	// backdrop-filter: blur(9px);
+	background: $grayBackColor;
 
-	&._form-focus {
-		border: 1px solid #000;
+	@media (max-width:$mobile) {
+		height: toRem(60);
+		border-radius: toRem(30);
 	}
+
+	// &._form-focus {
+	// 	border: 1px solid #000;
+	// }
 
 	&._form-error {
 		border: 1px solid #d42023;
@@ -36,11 +41,6 @@ textarea {
 
 	}
 
-	&_40 {
-		@include adaptiveValue("height", 60, 40);
-		@include adaptiveValue("font-size", 17, 14);
-		@include adaptiveValue("padding-left", 24, 15);
-	}
 }
 
 .form__error {
@@ -52,10 +52,7 @@ textarea {
 }
 
 .input {
-	&::placeholder {
-		font-weight: 350;
-		color: #666;
-	}
+	&::placeholder {}
 }
 
 
