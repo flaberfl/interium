@@ -31,39 +31,154 @@
 
 				<form class="form" action="">
 
-					<div class="form__row form__row_about">
-						<div class="form__item">
-							<input type="text" name="company" data-required data-error="Заполните поле!"
-								placeholder="Название компании" class="input">
-						</div>
-						<div class="form__item">
-							<input type="text" name="brand" data-required data-error="Заполните поле!"
-								placeholder="Торговая марка / бренд" class="input">
-						</div>
+					<div class="form__section">
+						<h2 class="form__title title-h2-form mb-30">О компании</h2>
 
-						<div class="form__item">
-							<select name="type">
-								<option data-show2 value="" selected>Тип компании</option>
-								<option value="t1">Тип компании №1</option>
-								<option value="t2">Тип компании №2</option>
-								<option value="t3">Тип компании №3</option>
-							</select>
-						</div>
+						<div class="form__row form__row_about">
+							<div class="form__item">
+								<input type="text" name="company" data-required data-error="Заполните поле!"
+									placeholder="Название компании" class="input">
+							</div>
+							<div class="form__item">
+								<input type="text" name="brand" data-required data-error="Заполните поле!"
+									placeholder="Торговая марка / бренд" class="input">
+							</div>
 
-						<div class="form__item">
-							<select name="category">
-								<option data-show2 value="" selected>Категории товаров</option>
-								<option value="c1">Категория товаров №1</option>
-								<option value="c2">Категория товаров №2</option>
-								<option value="c3">Категория товаров №3</option>
-							</select>
-						</div>
+							<div class="form__item">
+								<select name="type-company">
+									<option data-show2 value="" selected>Тип компании</option>
+									<option value="t1">Тип компании №1</option>
+									<option value="t2">Тип компании №2</option>
+									<option value="t3">Тип компании №3</option>
+								</select>
+							</div>
 
-						<div class="form__item form__item_text">
-							<textarea class="textarea" name="" id="" placeholder="Дополнительная информация о товарах"></textarea>
+							<div class="form__item">
+								<select name="category">
+									<option data-show2 value="" selected>Категории товаров</option>
+									<option value="c1">Категория товаров №1</option>
+									<option value="c2">Категория товаров №2</option>
+									<option value="c3">Категория товаров №3</option>
+								</select>
+							</div>
+
+							<div class="form__item form__item_text">
+								<textarea class="textarea" name="" id="" placeholder="Дополнительная информация о товарах"></textarea>
+							</div>
+
 						</div>
 
 					</div>
+
+
+					<div class="form__section">
+						<h2 class="form__title title-h2-form mb-30">Арендуемая площадь</h2>
+
+						<h3 class="form__subtitle mb-30">Площадь шоурума</h3>
+
+						<div class="form__row form__row_arenda">
+
+							<div class="form__line">
+								<div class="form__item form__item_sq-min">
+									<input type="text" name="sq-min" data-required data-error="Заполните поле!" placeholder="мин., м²"
+										class="input">
+								</div>
+
+								<div class="form__item form__item_sq-max">
+									<input type="text" name="sq-max" data-required data-error="Заполните поле!" placeholder="макс., м²"
+										class="input">
+								</div>
+							</div>
+
+							<div class="form__item">
+								<select name="type-showroom">
+									<option data-show2 value="" selected>Тип шоурума</option>
+									<option value="t1">Тип шоурума №1</option>
+									<option value="t2">Тип шоурума №2</option>
+									<option value="t3">Тип шоурума №3</option>
+								</select>
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="date" data-required data-error="Заполните поле!"
+									placeholder="Сроки отделки помещения, дней" class="input">
+							</div>
+
+							<div class="form__item">
+								<select name="is-an-office">
+									<option data-show2 value="" selected>Необходим ли офис?</option>
+									<option value="yes">Да, необходим</option>
+									<option value="no">Нет</option>
+								</select>
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="sq-office" data-required data-error="Заполните поле!"
+									placeholder="Площадь под офис, м²" class="input">
+							</div>
+
+							<div class="form__item">
+								<select name="is-an-store">
+									<option data-show2 value="" selected>Необходим ли склад?</option>
+									<option value="yes">Да, необходим</option>
+									<option value="no">Нет</option>
+								</select>
+							</div>
+
+							<div class="form__item">
+								<input type="text" name="sq-store" data-required data-error="Заполните поле!"
+									placeholder="Площадь под склад, м²" class="input">
+							</div>
+
+
+						</div>
+
+					</div>
+
+
+					<div class="form__section">
+						<h2 class="form__title title-h2-form mb-30">Контактные данные</h2>
+
+						<div class="form__item">
+							<input type="text" name="contact-name" data-required data-error="Заполните поле!"
+								placeholder="Контактное лицо" class="input">
+						</div>
+
+						<div class="form__item">
+							<input type="text" name="phone" data-required data-error="Заполните поле!" placeholder="Номер телефона"
+								class="input">
+						</div>
+
+						<div class="form__item">
+							<input type="text" name="email" data-required="email" data-error="Заполните поле!" placeholder="Email"
+								class="input">
+						</div>
+
+						<div class="form__item">
+							<input type="text" name="email" data-error="Заполните поле!" placeholder="Сайт" class="input">
+						</div>
+
+						<div class="form__item">
+							<input type="text" name="email" data-required data-error="Заполните поле!"
+								placeholder="Юр. адрес компании" class="input">
+						</div>
+
+					</div>
+
+					<div class="form__footer">
+						<p class="form__privacy text-ph-b mb-30">
+							Нажимая на кнопку «Отправить заявку», вы даете согласие на <a href="">обработку ваших персональных
+								данных.</a>
+						</p>
+					</div>
+
+					<button type="submit" class="btn form__button">
+						<span>Отправить заявку</span>
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M7 7L17 17M17 17V9M17 17H9" stroke="white" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</button>
 
 
 
