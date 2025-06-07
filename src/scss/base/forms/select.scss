@@ -3,6 +3,7 @@
 .select {
 	min-width: 0;
 	position: relative;
+	width: 100%;
 
 	// .select__body
 	&__body {
@@ -13,22 +14,23 @@
 	&__title {
 		color: inherit;
 		text-align: left;
-		border: 1px solid #666;
-		background-color: #fff;
+		// border: 1px solid #666;
+		// background-color: #fff;
 		cursor: pointer;
 		width: 100%;
-		color: #666;
+		// color: #666;
 
 
-@include adaptiveValue("border-radius", 35, 30);
+		
+		@include adaptiveValue("height", 70, 60);
+		@include adaptiveValue("border-radius", 35, 30);
 
 		._select-open & {
 			color: inherit;
-			border-radius: toRem(26) toRem(26) 0 0;
+			// border-radius: toRem(26) toRem(26) 0 0;
 		}
 
-		._select-open & {
-		}
+		._select-open & {}
 
 		._select-open & {
 			&::before {
@@ -50,17 +52,12 @@
 		&::after {
 			content: "";
 			position: absolute;
-			right: 26px;
+			right: 18px;
 			top: 50%;
-			background-color: #666;
+			background-color: $mainColor;
 			height: 2px;
-			width: 6px;
+			width: 12px;
 			transition: transform 0.5s ease 0s;
-
-			.item-total & {
-				right: 10px;
-				top: 54%;
-			}
 		}
 
 		&::before {
@@ -83,9 +80,7 @@
 
 
 
-		._select-open & {
-
-		}
+		._select-open & {}
 
 
 		>* {
@@ -114,24 +109,28 @@
 		}
 	}
 
-	// .select__content
+	// .select__content  // ПЛЕЙСХОЛДEР
 	&__content {
 		flex: 1 1 auto;
 		overflow: hidden;
 		// text-overflow: ellipsis;
 		white-space: nowrap;
-		font-size: toRem(18);
-		line-height: 350%;
 
-		.item-total & {
-			font-size: toRem(12);
-			width: toRem(78);
+		font-size: toRem(16);
+		font-weight: 500;
+		line-height: 150%;
+		color: $grayColor;
 
-			span {}
+		@media (max-width:$mobile) {
+			font-size: toRem(14);
 		}
 
 		span {
 			display: none;
+		}
+
+		._select-active & {
+			color: $mainColor;
 		}
 	}
 
@@ -148,48 +147,39 @@
 		background-color: transparent;
 		height: 100%;
 
-		._select-open & {
-			border-bottom: 1px solid #ededed;
-		}
+		// ._select-open & {
+		// 	border-bottom: 1px solid #ededed;
+		// }
 
-		&::placeholder {
-			color: red;
-		}
+		// &::placeholder {
+		// 	color: red;
+		// }
 	}
 
 	// .select__options
 	&__options {
-		color: #000;
+		// color: #000;
 		position: absolute;
 		top: calc(100% - toRem(1));
-		border-radius: 0 0 toRem(26) toRem(26);
-		box-shadow: 0 9px 54px 0 rgba(0, 0, 0, 0.04);
+		// border-radius: 0 0 toRem(26) toRem(26);
+		// box-shadow: 0 9px 54px 0 rgba(0, 0, 0, 0.04);
 		min-width: 100%;
 		left: 0;
-		background-color: #fff;
-		border: 1px solid #e2e2e2;
+		// background-color: #fff;
+		// border: 1px solid #e2e2e2;
 
 		border-top: 0;
-		padding: 10px 0px 5px 0px;
-		padding-bottom: toRem(12);
+		// padding: 10px 0px 5px 0px;
+		// padding-bottom: toRem(12);
 
-		.personal__form & {
-			padding-left: toRem(32);
-			padding-bottom: toRem(25);
-		}
-
-		.item-total & {
-			padding: 0px 0px 0px 0px;
-			border-radius: 0 0 toRem(16) toRem(16);
-		}
 	}
 
 	// .select__scroll
 	&__scroll {
-		overflow-y: auto;
-		overflow-x: hidden;
+		// overflow-y: auto;
+		// overflow-x: hidden;
 		// Максимальная высота
-		max-height: toRem(200);
+		// max-height: toRem(200);
 
 		// Стили скроллбара
 		.simplebar-scrollbar {
@@ -208,48 +198,13 @@
 		padding: 15px 15px;
 		color: inherit;
 
-		.filter & {
-			padding-left: 45px;
-			padding-top: 9px;
+		font-size: toRem(16);
+		font-weight: 500;
+		line-height: 150%;
+		color: $mainColor;
 
-			font-size: toRem(15);
-			font-weight: 350;
-			color: #666;
-
-			&::before {
-				content: '';
-				position: absolute;
-				width: toRem(18);
-				height: toRem(18);
-				border: 1px solid #f1f1f1;
-				border-radius: 4px;
-				background-color: #fff;
-				left: toRem(18);
-			}
-		}
-
-		.item-total & {
-
-			padding-top: toRem(10);
-			padding-bottom: toRem(10);
-		}
-
-		&._select-selected {
-			// background-color: #eee;
-
-			&::before {
-				border: 1px solid var(--secondary-color);
-				background: #fff url('@img/catalog/check.svg') center center no-repeat;
-			}
-		}
-
-		.personal__form & {
-
-			@media (any-hover: hover) {
-				&:hover {
-					background: #d9d9d9;
-				}
-			}
+		@media (max-width:$mobile) {
+			font-size: toRem(14);
 		}
 
 	}
@@ -287,48 +242,4 @@
 	&._select-multiple {}
 
 	&._select-checkbox {}
-}
-
-// Тег
-._select-tag {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: toRem(42);
-	padding: toRem(0) toRem(15);
-	padding-right: toRem(57);
-	border: 1px solid #f5f5f5;
-	border-radius: 50px;
-	background-color: #fff;
-
-	cursor: pointer;
-	font-size: toRem(15);
-
-	transition: all 0.3s;
-
-	&::before {
-		content: '';
-		position: absolute;
-		width: 20px;
-		height: 20px;
-		background: url('@img/catalog/x-b.svg') right center no-repeat;
-		right: toRem(15);
-	}
-
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: #000;
-			color: #fff;
-
-			&::before {
-				background: url('@img/catalog/x-w.svg') right center no-repeat;
-			}
-		}
-	}
-}
-
-
-.checkout__label {
-	color: red !important;
 }

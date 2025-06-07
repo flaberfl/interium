@@ -33,23 +33,34 @@
 
 					<div class="form__row form__row_about">
 						<div class="form__item">
-							<input type="text" name="company" data-required data-error="Заполните поле!" placeholder="Название компании"
-								class="input">
+							<input type="text" name="company" data-required data-error="Заполните поле!"
+								placeholder="Название компании" class="input">
 						</div>
 						<div class="form__item">
-							<input type="text" name="brand" data-required data-error="Заполните поле!" placeholder="Торговая марка / бренд"
-								class="input">
+							<input type="text" name="brand" data-required data-error="Заполните поле!"
+								placeholder="Торговая марка / бренд" class="input">
 						</div>
 
 						<div class="form__item">
+							<select name="type">
+								<option data-show2 value="" selected>Тип компании</option>
+								<option value="t1">Тип компании №1</option>
+								<option value="t2">Тип компании №2</option>
+								<option value="t3">Тип компании №3</option>
+							</select>
+						</div>
 
-<select name="form[]" data-class-modif="form">
-	<option data-show2 value="" selected>Тип компании</option>
-	<option value="2">Пункт №2</option>
-	<option value="3">Пункт №3</option>
-	<option value="4">Пункт №4</option>
-</select>
+						<div class="form__item">
+							<select name="category">
+								<option data-show2 value="" selected>Категории товаров</option>
+								<option value="c1">Категория товаров №1</option>
+								<option value="c2">Категория товаров №2</option>
+								<option value="c3">Категория товаров №3</option>
+							</select>
+						</div>
 
+						<div class="form__item form__item_text">
+							<textarea name="" id="" placeholder="Fefeffe"></textarea>
 						</div>
 
 					</div>

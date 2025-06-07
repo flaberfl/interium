@@ -132,8 +132,8 @@ padding-bottom: 30px;
 	padding-bottom: toRem(56);
 	padding-top: toRem(30);
 
-	@include adaptiveValue("padding-left", 83, 0);
-	@include adaptiveValue("padding-right", 83, 0);
+	// @include adaptiveValue("padding-left", 83, 0);
+	// @include adaptiveValue("padding-right", 83, 0);
 
 
 }
