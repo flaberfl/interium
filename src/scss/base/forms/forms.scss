@@ -8,6 +8,24 @@
 			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 
+		&_contacts {
+			grid-template-columns: repeat(6, 1fr);
+
+			.form__item {
+
+				&:nth-child(1),
+				&:nth-child(2),
+				&:nth-child(3) {
+					grid-column: span 2;
+				}
+
+				&:nth-child(4),
+				&:nth-child(5) {
+					grid-column: span 3;
+				}
+			}
+		}
+
 		&_arenda1 {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
@@ -19,7 +37,6 @@
 		&:not(:last-child) {
 			@include adaptiveValue("margin-bottom", 30, 15);
 		}
-
 	}
 
 	&__section {
