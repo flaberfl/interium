@@ -176,10 +176,10 @@
 
 	// .select__scroll
 	&__scroll {
-		// overflow-y: auto;
-		// overflow-x: hidden;
+		overflow-y: auto;
+		overflow-x: hidden;
 		// Максимальная высота
-		// max-height: toRem(200);
+		max-height: toRem(200);
 
 		// Стили скроллбара
 		.simplebar-scrollbar {
@@ -219,16 +219,16 @@
 
 	&__text {}
 
-	&--show-top {
-		.select__options {
-			top: auto;
-			bottom: calc(100% - toRem(1));
-			border: 1px solid #d9d9d9;
-			border-bottom: 0;
-			border-radius: 4px 4px 0 0;
-			padding: 5px 0px 10px 0px;
-		}
-	}
+	// &--show-top {
+	// 	.select__options {
+	// 		top: auto;
+	// 		bottom: calc(100% - toRem(1));
+	// 		border: 1px solid #d9d9d9;
+	// 		border-bottom: 0;
+	// 		border-radius: 4px 4px 0 0;
+	// 		padding: 5px 0px 10px 0px;
+	// 	}
+	// }
 
 	// Состояние селекта
 	&._select-open {}

@@ -5,7 +5,15 @@
 		@include adaptiveValue("gap", 30, 15);
 
 		&_about {
-			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-template-columns: repeat(4, 1fr);
+
+			@media (max-width: toEm(1075)) {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			@media (max-width:$mobileSmall) {
+				grid-template-columns: auto;
+			}
 		}
 
 		&_contacts {
@@ -28,10 +36,22 @@
 
 		&_arenda1 {
 			grid-template-columns: 1fr 1fr 1fr;
+
+			@media (max-width: toEm(800)) {
+				grid-template-columns: auto;
+			}
 		}
 
 		&_arenda2 {
 			grid-template-columns: 1fr 1fr 1fr 1fr;
+
+			@media (max-width: toEm(1080)) {
+				grid-template-columns: 1fr 1fr;
+			}
+
+			@media (max-width:$mobileSmall) {
+				grid-template-columns: auto;
+			}
 		}
 
 		&:not(:last-child) {
@@ -43,6 +63,7 @@
 		&:not(:last-child) {
 			margin-bottom: toRem(30);
 		}
+
 	}
 
 	&__subtitle {
@@ -83,7 +104,8 @@
 
 
 		&_text {
-			grid-column: span 4;
+			/* остаётся на третьей строке */
+			grid-column: 1 / -1;
 		}
 
 	}
@@ -105,6 +127,8 @@
 	}
 
 	&__privacy {
+		margin-top: toRem(60);
+
 		text-align: center;
 
 		a {

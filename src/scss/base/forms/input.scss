@@ -10,7 +10,6 @@ textarea {
 }
 
 .input {
-	border-radius: toRem(35);
 	width: 100%;
 	display: block;
 	padding: toRem(20);
@@ -26,6 +25,8 @@ textarea {
 	font-weight: 500;
 	line-height: 150%;
 	color: $mainColor;
+
+	@include adaptiveValue("border-radius", 35, 30);
 
 	@media (max-width:$mobile) {
 		font-size: toRem(14);
@@ -93,6 +94,16 @@ textarea {
 	min-height: 140px;
 
 	background: $grayBackColor;
+
+
+	font-size: toRem(16);
+	font-weight: 500;
+	line-height: 150%;
+	color: $grayColor;
+
+	@media (max-width:$mobile) {
+		font-size: toRem(14);
+	}
 
 	@include adaptiveValue("border-radius", 35, 30);
 }
