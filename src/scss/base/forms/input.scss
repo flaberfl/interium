@@ -86,12 +86,11 @@ textarea {
 	}
 }
 
-textarea.input {
+.textarea {
 	resize: none;
-	padding: toRem(24);
-	border-radius: toRem(23);
+	padding: toRem(20);
+	width: 100%;
+	min-height: 140px;
 
-	.callback-cooperation & {
-		min-height: toRem(195);
-	}
+	@include adaptiveValue("border-radius", 35, 30);
 }
