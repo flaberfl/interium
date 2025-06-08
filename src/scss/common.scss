@@ -45,6 +45,10 @@
   a {
     color: $mainColor;
   }
+
+  svg {
+    animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+  }
 }
 
 .cta-button {
@@ -229,83 +233,200 @@
 
 // Анимации
 
+[anim-left-right] {
+  transform: translate(-100%, 0);
+  opacity: 0;
+  transition: all $animSpeed ease 0s;
+
+  &._watcher-view {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+[anim-right-left] {
+  transform: translate(100%, 0);
+  opacity: 0;
+  transition: all $animSpeed ease 0s;
+
+  &._watcher-view {
+    transform: none;
+    opacity: 1;
+  }
+}
 
 [anim-up-down] {
-	transform: translate(toRem(0), toRem(30));
-	opacity: 0;
-	transition: all $animSpeed ease 0s;
+  transform: translate(toRem(0), toRem(30));
+  opacity: 0;
+  transition: all $animSpeed ease 0s;
 
-	&._watcher-view {
-		transform: none;
-		opacity: 1;
-	}
+  &._watcher-view {
+    transform: none;
+    opacity: 1;
+  }
 }
 
 [anim-scale] {
-	transform: scale(.9);
-	opacity: 0;
-	transition: all $animSpeed ease 0s;
+  transform: scale(.9);
+  opacity: 0;
+  transition: all $animSpeed ease 0s;
 
-	&._watcher-view {
-		transform: scale(1);
-		opacity: 1;
-	}
+  &._watcher-view {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 [anim-scale-max] {
-	transform: scale(.2);
-	opacity: 0;
-	transition: all 2s ease 0s;
+  transform: scale(.2);
+  opacity: 0;
+  transition: all 2s ease 0s;
 
-	&._watcher-view {
-		transform: scale(1);
-		opacity: 0.05;
-	}
+  &._watcher-view {
+    transform: scale(1);
+    opacity: 0.05;
+  }
 }
 
 [anim-scale-0] {
-	transform: scale(.9);
-	// opacity: 0;
-	transition: all $animSpeed ease 0s;
+  transform: scale(.9);
+  // opacity: 0;
+  transition: all $animSpeed ease 0s;
 
-	&._watcher-view {
-		transform: scale(1);
-		// opacity: 1;
-	}
+  &._watcher-view {
+    transform: scale(1);
+    // opacity: 1;
+  }
 }
 
 [delay10] {
-	transition: all $animSpeed ease .1s;
+  transition: all $animSpeed ease .1s;
 }
 
 [delay20] {
-	transition: all $animSpeed ease .2s;
+  transition: all $animSpeed ease .2s;
 }
 
 [delay30] {
-	transition: all $animSpeed ease .3s;
+  transition: all $animSpeed ease .3s;
 }
 
 [delay40] {
-	transition: all $animSpeed ease .4s;
+  transition: all $animSpeed ease .4s;
 }
 
 [delay50] {
-	transition: all $animSpeed ease .5s;
+  transition: all $animSpeed ease .5s;
 }
 
 [delay60] {
-	transition: all $animSpeed ease .6s;
+  transition: all $animSpeed ease .6s;
 }
 
 [delay70] {
-	transition: all $animSpeed ease .7s;
+  transition: all $animSpeed ease .7s;
 }
 
 [delay80] {
-	transition: all $animSpeed ease .8s;
+  transition: all $animSpeed ease .8s;
 }
 
 [delay120] {
-	transition: all $animSpeed ease 1.2s;
+  transition: all $animSpeed ease 1.2s;
+}
+
+@keyframes trambling-animation {
+
+  0%,
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  10%,
+  30% {
+    transform: rotate(-10deg);
+  }
+
+  20%,
+  40% {
+    transform: rotate(10deg);
+  }
+}
+
+
+@keyframes arrow {
+  0% {
+    transform: translate(-2px, -2px);
+    /* верхний левый угол */
+    // opacity: 0;
+  }
+
+  50% {
+    transform: translate(5px, 5px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-2px, -2px);
+    /* нижний правый угол */
+    // opacity: 0;
+  }
+}
+
+
+
+@keyframes arrow-down {
+  0% {
+    transform: translate(0, 5px);
+    // transform: translate(0, -2px);
+    /* верхний левый угол */
+    // opacity: 0;
+  }
+
+  50% {
+    // transform: translate(0, 5px);
+    transform: translate(0, -2px);
+    opacity: 1;
+  }
+
+  100% {
+    // transform: translate(0, -2px);
+    transform: translate(0, 5px);
+    /* нижний правый угол */
+    // opacity: 0;
+  }
+}
+
+.anim-arrow {
+  svg {
+    animation: arrow 2s linear infinite;
+  }
+}
+
+.anim-down {
+  svg {
+    animation: arrow-down 2s linear infinite;
+  }
+}
+
+.anim-scale {
+  svg {
+    animation: anim-scale 2s linear infinite;
+  }
+}
+
+@keyframes anim-scale {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }

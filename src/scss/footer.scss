@@ -63,6 +63,10 @@
     a {
       color: $mainColor;
     }
+
+    svg {
+      animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;
+    }
   }
 
   /* .footer__bottom */
@@ -78,7 +82,7 @@
     font-weight: 400;
     line-height: 150%;
 
-    span {
+    a {
       color: $blueColor;
     }
   }
@@ -89,3 +93,16 @@
 .btn {}
 
 .privacy-link {}
+
+
+.fancybox__slide.has-image>.fancybox__content {
+
+  border-radius: toRem(35);
+  overflow: hidden;
+}
+
+.fancybox__content>.f-button.is-close-btn {
+  top: 15px !important;
+  right: 15px !important;
+  color: $mainColor;
+}
