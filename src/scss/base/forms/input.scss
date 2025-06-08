@@ -16,10 +16,7 @@ textarea {
 	caret-color: inherit;
 	height: toRem(70);
 
-	// border: 1px solid #ececec;
-	// backdrop-filter: blur(9px);
 	background: $grayBackColor;
-
 
 	font-size: toRem(16);
 	font-weight: 500;
@@ -34,7 +31,6 @@ textarea {
 
 	@media (max-width:$mobile) {
 		height: toRem(60);
-		border-radius: toRem(30);
 	}
 
 	// &._form-focus {
@@ -49,9 +45,7 @@ textarea {
 		.input::placeholder {
 			display: none;
 		}
-
 	}
-
 }
 
 .form__error {
@@ -94,7 +88,6 @@ textarea {
 	min-height: 140px;
 
 	background: $grayBackColor;
-
 
 	font-size: toRem(16);
 	font-weight: 500;
