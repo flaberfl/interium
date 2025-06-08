@@ -116,8 +116,6 @@
 
 
 
-
-
 .title-h1,
 .title-h2,
 .title-h2-w {
@@ -227,4 +225,87 @@
       stroke: $blueColor;
     }
   }
+}
+
+// Анимации
+
+
+[anim-up-down] {
+	transform: translate(toRem(0), toRem(30));
+	opacity: 0;
+	transition: all $animSpeed ease 0s;
+
+	&._watcher-view {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+[anim-scale] {
+	transform: scale(.9);
+	opacity: 0;
+	transition: all $animSpeed ease 0s;
+
+	&._watcher-view {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+[anim-scale-max] {
+	transform: scale(.2);
+	opacity: 0;
+	transition: all 2s ease 0s;
+
+	&._watcher-view {
+		transform: scale(1);
+		opacity: 0.05;
+	}
+}
+
+[anim-scale-0] {
+	transform: scale(.9);
+	// opacity: 0;
+	transition: all $animSpeed ease 0s;
+
+	&._watcher-view {
+		transform: scale(1);
+		// opacity: 1;
+	}
+}
+
+[delay10] {
+	transition: all $animSpeed ease .1s;
+}
+
+[delay20] {
+	transition: all $animSpeed ease .2s;
+}
+
+[delay30] {
+	transition: all $animSpeed ease .3s;
+}
+
+[delay40] {
+	transition: all $animSpeed ease .4s;
+}
+
+[delay50] {
+	transition: all $animSpeed ease .5s;
+}
+
+[delay60] {
+	transition: all $animSpeed ease .6s;
+}
+
+[delay70] {
+	transition: all $animSpeed ease .7s;
+}
+
+[delay80] {
+	transition: all $animSpeed ease .8s;
+}
+
+[delay120] {
+	transition: all $animSpeed ease 1.2s;
 }

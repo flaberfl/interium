@@ -111,8 +111,8 @@ body::after {
 	@include adaptiveValue("height", 70, 40);
 
 	svg {
-		@include adaptiveValue("width", 24, 10);
-		@include adaptiveValue("height", 24, 10);
+		@include adaptiveValue("width", 24, 18);
+		@include adaptiveValue("height", 24, 18);
 	}
 
 	@media (any-hover: hover) {

@@ -191,7 +191,7 @@ import "./files/sliders.js";
 // Наблюдатель объектов с атрибутом data-watch
 // Документация: https://start-template.ru/modul-nablyudatel-po-poyavleniyu-elementov-pri-prokrutke-straniczy-skrolle-chertogi-frilansera-v3-0-0/
 // Сниппет(HTML):
-// import './libs/watcher.js'
+import './libs/watcher.js'
 
 // / / Модуль по экранной прокрутке
 // Документация: https://start-template.ru/modul-ekrannoj-prokrutki-straniczy-fullpage-chertogi-frilansera-v3-0-0/
