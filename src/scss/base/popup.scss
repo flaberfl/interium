@@ -27,7 +27,13 @@ body::after {
 	transition: all 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
-	// overscroll-behavior: contain;
+	z-index: 999;
+	// display: none;
+	overscroll-behavior: contain;
+
+	.loaded & {
+		display: block;
+	}
 }
 
 .popup_show {
@@ -125,5 +131,3 @@ body::after {
 	flex-direction: column;
 	padding-top: toRem(30);
 }
-
-
