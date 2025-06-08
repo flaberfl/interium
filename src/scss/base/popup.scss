@@ -10,7 +10,7 @@ body::after {
 	transition: opacity 0.8s ease 0s;
 	pointer-events: none;
 	z-index: 600;
-	backdrop-filter: blur(3px);
+	// backdrop-filter: blur(3px);
 }
 
 .popup-show body::after {
@@ -24,7 +24,7 @@ body::after {
 	bottom: 0;
 	right: 0;
 	// padding: 30px 10px;
-	transition: visibility 0.8s ease 0s;
+	transition: all 0.8s ease 0s;
 	visibility: hidden;
 	pointer-events: none;
 	// overscroll-behavior: contain;
