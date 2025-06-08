@@ -28,6 +28,10 @@
 
     @media (max-width: toEm(530)) {
       flex-direction: column;
+
+      .text-b {
+        text-align: center;
+      }
     }
   }
 

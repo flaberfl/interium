@@ -8,6 +8,10 @@
 		@media (max-width:$mobile) {
 			grid-template-columns: auto;
 		}
+
+		@media (max-width:$mobileSmall){
+			 gap: 10px; 
+		}
 	}
 
 	/* .about__item */
@@ -18,8 +22,12 @@
 
 		background: $grayBackColor;
 
-		@include adaptiveValue("padding", 30, 15);
+		@include adaptiveValue("padding", 30, 10);
 		@include adaptiveValue("border-radius", 35, 30);
+
+		.text-b {
+			font-size: toRem(16);
+		}
 	}
 
 	/* .about__icon */
@@ -57,9 +65,8 @@
 		min-height: toRem(340);
 		text-align: center;
 		height: 100%;
-		
-		@media (min-width:toEm(560)){
-		}
+
+		@media (min-width:toEm(560)) {}
 
 
 		img {

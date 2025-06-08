@@ -29,11 +29,11 @@ body::after {
 	pointer-events: none;
 	z-index: 999;
 	// display: none;
-	overscroll-behavior: contain;
+	// overscroll-behavior: contain;
 
-	.loaded & {
-		display: block;
-	}
+	// .loaded & {
+	// 	display: block;
+	// }
 }
 
 .popup_show {
