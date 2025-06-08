@@ -37,19 +37,13 @@ function initSliders() {
 			observer: true,
 			observeParents: true,
 			slidesPerView: 1,
-			// spaceBetween: 20,
-			// centeredSlides: true,
-			// effect: "fade",
+
 			autoHeight: true,
 			speed: 800,
 
-			//touchRatio: 0,
-			//simulateTouch: false,
-			// loop: true,
-			//preloadImages: false,
 			lazy: true,
 
-			slidesPerView: "auto",
+			// slidesPerView: "auto",
 
 
 			effect: "fade",
