@@ -12,7 +12,10 @@
 
     @media (max-width: toEm(600)) {
       grid-template-columns: auto;
+    }
 
+    @media (max-width:$mobileSmall){
+       gap: toRem(10); 
     }
   }
 
@@ -28,7 +31,7 @@
     @include adaptiveValue("padding", 30, 15);
 
     @media (max-width:$mobile) {
-      min-height: toRem(70);
+      min-height: toRem(20);
     }
 
     img {
@@ -39,7 +42,7 @@
       line-height: 150%;
 
       @media (max-width:$mobile) {
-        font-size: toRem(14);
+        font-size: toRem(16);
       }
     }
 
