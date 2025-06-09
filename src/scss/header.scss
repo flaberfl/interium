@@ -28,7 +28,6 @@
 
 		._header-show & {
 			transform: none;
-			// @include adaptiveValue("height", 100, 60);
 		}
 	}
 
@@ -59,7 +58,6 @@
 			@include adaptiveValue("width", 175, 80);
 		}
 	}
-
 }
 
 
