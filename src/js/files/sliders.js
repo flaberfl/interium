@@ -119,7 +119,7 @@ function initSliders() {
 			observeParents: true,
 			// slidesPerView: 1,
 			// spaceBetween: 20,
-			autoHeight: true,
+			// autoHeight: true,
 			speed: 800,
 			//touchRatio: 0,
 			//simulateTouch: false,
@@ -223,7 +223,6 @@ function initSliders() {
 					spaceBetween: 20,
 				},
 				992: {
-
 					slidesPerView: 3,
 					spaceBetween: 30,
 				},

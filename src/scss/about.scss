@@ -75,6 +75,20 @@
 		display: flex;
 	}
 
+	&__video {
+		margin: 0 auto;
+
+		max-width: toRem(1440);
+
+		@include adaptiveValue("padding-top", 60, 30);
+		@include adaptiveValue("padding-bottom", 60, 30);
+	}
+	
+	&-frame {
+		overflow: hidden;
+		@include adaptiveValue("border-radius", 35, 30);
+	}
+
 	/* .about__buttons */
 	&__buttons {
 		display: flex;

@@ -26,6 +26,7 @@
     a,
     img {
       max-width: 100%;
+      aspect-ratio: 540 / 370;
     }
 
     @media (max-width:$mobile) {
@@ -38,8 +39,8 @@
     position: relative;
     display: flex;
 
-    @media (max-width:$mobile){
-       justify-content: center; 
+    @media (max-width:$mobile) {
+      justify-content: center;
     }
   }
 

@@ -8,13 +8,17 @@
     position: relative;
   }
 
+  &__slider {}
+
   /* .gallery__slide */
   &__slide {
 
     a,
     img {
       max-width: 100%;
+      aspect-ratio: 540 / 370;
     }
+
     img {
       @include adaptiveValue("border-radius", 35, 30);
     }

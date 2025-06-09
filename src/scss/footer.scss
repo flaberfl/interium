@@ -1,10 +1,7 @@
 .footer {
-
   @include adaptiveValue("padding-bottom", 100, 60);
-  @include adaptiveValue("padding-top", 120, 60);
+  @include adaptiveValue("padding-top", 74, 12);
 
-  /* .footer__container */
-  &__container {}
 
   /* .footer__content */
   &__content {
@@ -12,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @include adaptiveValue("margin-bottom", 120, 60);
+    @include adaptiveValue("margin-bottom", 72, 60);
 
     @media (max-width: toEm(1200)) {
       flex-direction: column;
@@ -28,15 +25,20 @@
 
     @media (max-width: toEm(530)) {
       flex-direction: column;
+      gap: 0;
 
       .text-b {
+        margin-top: -20px;
         text-align: center;
       }
     }
   }
 
   /* .footer__logo */
-  &__logo {}
+  &__logo {
+    width: toRem(175);
+    // height: toRem(100);
+  }
 
   /* .footer__contact */
   &__contact {
