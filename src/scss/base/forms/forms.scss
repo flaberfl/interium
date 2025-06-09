@@ -145,8 +145,9 @@
 
 		@include adaptiveValue("width", 278, 340);
 
-		&.disable {
+		&:disabled {
 			opacity: 0.5;
+			cursor: progress;
 		}
 	}
 

@@ -27,7 +27,7 @@
 
 			<div class="popup__text">
 
-				<form class="form" action="">
+				<form id="formCall" class="form" action="">
 
 					<div class="form__section">
 						<h2 class="form__title title-h2-form mb-30">О компании</h2>
@@ -35,7 +35,7 @@
 						<div class="form__row form__row_about">
 
 							<div class="form__item">
-								<input type="text" name="company" data-required placeholder="Название компании" class="input">
+								<input type="text" name="company" data-required placeholder="Название компании" class="input req">
 							</div>
 
 							<div class="form__item">
@@ -52,7 +52,7 @@
 							</div>
 
 							<div class="form__item">
-								<select name="category" data-required
+								<select class="req" name="category" data-required>
 									<option data-show2 value="" selected>Категории товаров</option>
 									<option value="c1">Категория товаров №1</option>
 									<option value="c2">Категория товаров №2</option>
@@ -78,12 +78,12 @@
 							<div class="form__line">
 								<div class="form__item form__item_sq-min">
 									<input type="text" name="sq-min" data-required placeholder="мин., м²"
-										class="input">
+										class="input req">
 								</div>
 
 								<div class="form__item form__item_sq-max">
 									<input type="text" name="sq-max" data-required placeholder="макс., м²"
-										class="input">
+										class="input req">
 								</div>
 							</div>
 
@@ -137,17 +137,16 @@
 
 							<div class="form__item">
 								<input type="text" name="contact-name" data-required
-									placeholder="Контактное лицо" class="input">
+									placeholder="Контактное лицо" class="input req">
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="phone" data-required
-									placeholder="Номер телефона" class="input">
+								<input type="text" name="phone" data-required placeholder="Номер телефона" class="input req">
 							</div>
 
 							<div class="form__item">
 								<input type="text" name="email" data-required="email" placeholder="Email"
-									class="input">
+									class="input" req>
 							</div>
 
 							<div class="form__item">

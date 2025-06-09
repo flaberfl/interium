@@ -23,3 +23,5 @@ Fancybox.defaults = {
   buttons: ['zoom', 'thumbs', 'close'],
   protect: false
 };
+
+
