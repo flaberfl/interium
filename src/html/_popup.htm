@@ -35,13 +35,12 @@
 						<div class="form__row form__row_about">
 
 							<div class="form__item">
-								<input type="text" name="company" data-required data-error="Заполните поле!"
+								<input type="text" name="company" data-required data-error="Укажите название компании!"
 									placeholder="Название компании" class="input">
 							</div>
 							
 							<div class="form__item">
-								<input type="text" name="brand" data-required data-error="Заполните поле!"
-									placeholder="Торговая марка / бренд" class="input">
+								<input type="text" name="brand" placeholder="Торговая марка / бренд" class="input">
 							</div>
 
 							<div class="form__item">
@@ -54,7 +53,7 @@
 							</div>
 
 							<div class="form__item">
-								<select name="category">
+								<select name="category" data-required data-error="Выберите категорию товаров!">
 									<option data-show2 value="" selected>Категории товаров</option>
 									<option value="c1">Категория товаров №1</option>
 									<option value="c2">Категория товаров №2</option>
@@ -79,12 +78,12 @@
 
 							<div class="form__line">
 								<div class="form__item form__item_sq-min">
-									<input type="text" name="sq-min" data-required data-error="Заполните поле!" placeholder="мин., м²"
+									<input type="text" name="sq-min" data-required data-error="Укажите площадь!" placeholder="мин., м²"
 										class="input">
 								</div>
 
 								<div class="form__item form__item_sq-max">
-									<input type="text" name="sq-max" data-required data-error="Заполните поле!" placeholder="макс., м²"
+									<input type="text" name="sq-max" data-required data-error="Укажите площадь!" placeholder="макс., м²"
 										class="input">
 								</div>
 							</div>
@@ -99,8 +98,7 @@
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="date" data-required data-error="Заполните поле!"
-									placeholder="Сроки отделки помещения, дней" class="input">
+								<input type="text" name="date" placeholder="Сроки отделки помещения, дней" class="input">
 							</div>
 
 						</div>
@@ -115,8 +113,7 @@
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="sq-office" data-required data-error="Заполните поле!"
-									placeholder="Площадь под офис, м²" class="input">
+								<input type="text" name="sq-office" placeholder="Площадь под офис, м²" class="input">
 							</div>
 
 							<div class="form__item">
@@ -128,8 +125,7 @@
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="sq-store" data-required data-error="Заполните поле!"
-									placeholder="Площадь под склад, м²" class="input">
+								<input type="text" name="sq-store" placeholder="Площадь под склад, м²" class="input">
 							</div>
 						</div>
 
@@ -146,22 +142,21 @@
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="phone" data-required data-error="Заполните поле!" placeholder="Номер телефона"
+								<input type="text" name="phone" data-required data-error="Укажите номер телефона!" placeholder="Номер телефона"
 									class="input">
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="email" data-required="email" data-error="Заполните поле!" placeholder="Email"
+								<input type="text" name="email" data-required="email" data-error="Укажите email!" placeholder="Email"
 									class="input">
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="email" data-error="Заполните поле!" placeholder="Сайт" class="input">
+								<input type="text" name="www" placeholder="Сайт" class="input">
 							</div>
 
 							<div class="form__item">
-								<input type="text" name="email" data-required data-error="Заполните поле!"
-									placeholder="Юр. адрес компании" class="input">
+								<input type="text" name="address" placeholder="Юр. адрес компании" class="input">
 							</div>
 
 						</div>
